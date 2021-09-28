@@ -30,6 +30,10 @@ let best_seller_product = [{"name":"Delicate Facial Cleanser Kashmiri Saffron & 
             let add_to_bag = document.createElement("button");
             add_to_bag.innerHTML="ADD TO BAG";
 
+            add_to_bag.onclick = function(){
+                add_to_cart(product);
+            }
+
             div.append(img,tag,name,size,review,price,add_to_bag);
 
             best_product_info.append(div);
@@ -39,3 +43,20 @@ let best_seller_product = [{"name":"Delicate Facial Cleanser Kashmiri Saffron & 
     }
 
 show_best_seller();
+
+if(localStorage.getItem("f_cart")==null){
+    localStorage.setItem("f_cart",JSON.stringify([]));
+  }
+  
+  function add_to_cart(p){
+  
+    let products_cart = JSON.parse(localStorage.getItem("f_cart"));
+  
+    products_cart.push(p);
+  
+    localStorage.setItem("f_cart",JSON.stringify(products_cart));
+  
+    console.log(products_cart);
+   
+  
+  }
