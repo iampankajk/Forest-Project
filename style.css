@@ -1,0 +1,63 @@
+body{
+    font-family: "calibri";
+    font-weight: 400;
+    color: #333;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+.best_seller_product{
+    padding-bottom: 60px;
+    width: 1250px;
+    margin: auto;
+}
+.span{
+    display: block;
+    font-size: 15px ;
+    font-weight: 400;
+}
+.span::after{
+    display: block;
+    content: " ";
+}
+.shop_now{
+    right: 0;
+    float: right;
+    font-size: 15px ;
+    font-weight: 400;
+    color: #333;
+    
+}
+.shop_now::after{
+    display:inline-block;
+    height:15px;
+    width:30px;
+    margin-right: 10px;
+    content: "";
+    background:url("images/arrow-right--i7ih6S.svg") no-repeat 0 0;
+    background-size: 30px 20px;
+}
+#best_product_info{
+    display: flex;
+    gap: 10px;
+}
+#best_product_info>div{
+    flex-basis: 250px;
+    font-size: 15px;
+    font-weight: 300;
+    margin: auto;
+    background-color: rgb(243, 243, 243);
+    
+}
+
+#best_product_info>div>button{
+    margin: auto;
+    width: 300px;
+    padding: 20px;
+    background-color: transparent;
+    margin-left: 5px;
+    border: solid 1px black;
+}  
+.container>h2{
+    font-weight: 400px;
+}
