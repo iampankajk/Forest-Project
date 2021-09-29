@@ -159,9 +159,8 @@ let gifts_info=document.getElementById("gifts_info");
 
     });
 
-    
-
  }
+
 show_gifts();
 
 if(localStorage.getItem("f_cart")==null){
