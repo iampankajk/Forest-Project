@@ -57,6 +57,8 @@ a {
 .hr {
   margin: 0px auto;
   width: 1200px;
+  height: 1px;
+  background-color: #333;
 }
 
 .page_content>div {
