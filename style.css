@@ -176,3 +176,46 @@ body{
 .container>h2{
     font-weight: 400px;
 }
+
+#category{
+  display:flex;  
+  gap: 10px;
+  justify-content:center; 
+}
+#category img {
+max-width: 100%;
+
+}
+#category>div{
+  margin: auto;
+  flex-basis: 300px;
+  font-size: 15px;
+  font-weight: 300;
+  margin: auto;
+ 
+  
+
+} .category_shop_now{
+  left:10%;
+  float: left;
+  font-size: 15px ;
+  
+  color: #333;
+  
+}
+
+.category_shop_now::after{
+  display:inline-block;
+  height:15px;
+  width:30px;
+  margin-right: 10px;
+  content:"";
+  background:url("images/arrow-right--i7ih6S.svg") no-repeat 0 0;
+  background-size: 30px 20px;
+}
+.category_span{
+  display: block;
+  font-size: 15px ;
+ 
+  color:#333
+}
