@@ -17,7 +17,7 @@ function top_nav() {
       nav_text.textContent = top_nav_text[count]
 
       count++
-  }, 1000);
+  }, 5000);
 
 
 
