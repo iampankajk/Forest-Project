@@ -13,10 +13,10 @@ function top_nav() {
   var count = 0;
   count++
   setInterval(() => {
-      if (count == top_nav_text.length) { count = 0 }
-      nav_text.textContent = top_nav_text[count]
+    if (count == top_nav_text.length) { count = 0 }
+    nav_text.textContent = top_nav_text[count]
 
-      count++
+    count++
   }, 5000);
 
 
@@ -71,111 +71,118 @@ dots.forEach((dot, i) => {
 
 
 
-let best_seller_product = [{"name":"Delicate Facial Cleanser Kashmiri Saffron & Neem","tag":"BESTSELLER","size":"200 ml","review":"4.7/5 (140 REVIEWS)","price":"1,395.00","image":"images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png"},
-    {"name":"Soundarya Radiance Cream With 24K Gold & SPF25","tag":"BESTSELLER","size":"50 g","review":"4.7/5 (119 REVIEWS)","price":"5,400.00","image":"images/8842_soundarya_radiance_cream_50g_front.png"},
-    {"name":"Hand Pounded Organic Fruit Scrub","tag":"BESTSELLER","size":"50 g","review":"4.8/5 (29 REVIEWS)","price":"1,950.00","image":"images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png"},
-    {"name":"Hair Care Ritual For Glossy Hair","tag":"BESTSELLER","size":"600 g","review":"4.8/5 (129 REVIEWS)","price":"4,500.00","image":"images/hair_care_ritual_for_glossy_hair.png"},
-    ];
+let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png","qty":1 },
+{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png","qty":1 },
+{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png","qty":1 },
+{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png","qty":1 },
+];
 
-let gifts_section=[
-  {"image":"images/lek_box_2.png","name":"FACIAL CARE SELECTION BOX ","tag":"GIFTING","review":"4.6/5(9 Review)","price":"₹2,575.00","qty":1},
-  {"image":"images/mens_box.png","name":"GENTELMEN'S BOX ","tag":"GIFTING","review":"5/5(1 Review)","price":"₹4,075.00" ,"qty":1},
-  
-  {"image":"images/evening_ritual_box.png","name":"EVENING RITUAL GIFT BOX ","tag":"GIFTING","review":"4.5/5(1 Review)   ","price":"₹4,950.00" ,"qty":1},
-  {"image":"images/morning_ritual_box.png","name":"MORNING RITUAL  GIFT BOX ","tag":"GIFTING","review":"4.6/5(1 Review)    ","price":"₹4,895.00" ,"qty":1}];
+let gifts_section = [
+  { "image": "images/lek_box_2.png", "name": "FACIAL CARE SELECTION BOX ", "tag": "GIFTING", "review": "4.6/5(9 Review)", "price": "₹2,575.00", "qty": 1 },
+  { "image": "images/mens_box.png", "name": "GENTELMEN'S BOX ", "tag": "GIFTING", "review": "5/5(1 Review)", "price": "₹4,075.00", "qty": 1 },
 
-    let best_product_info = document.getElementById("best_product_info");
-    function show_best_seller(){
-        best_seller_product.forEach(function(product){
-            let div = document.createElement("div");
+  { "image": "images/evening_ritual_box.png", "name": "EVENING RITUAL GIFT BOX ", "tag": "GIFTING", "review": "4.5/5(1 Review)   ", "price": "₹4,950.00", "qty": 1 },
+  { "image": "images/morning_ritual_box.png", "name": "MORNING RITUAL  GIFT BOX ", "tag": "GIFTING", "review": "4.6/5(1 Review)    ", "price": "₹4,895.00", "qty": 1 }];
 
-            let img = document.createElement("img");
-            img.src = product.image;
+let best_product_info = document.getElementById("best_product_info");
+function show_best_seller(best_seller_product) {
+  best_seller_product.forEach(function (product) {
+    let div = document.createElement("div");
 
-            let name = document.createElement("p");
-            name.textContent = product.name;
+    let img = document.createElement("img");
+    img.src = product.image;
 
-            let tag = document.createElement("p");
-            tag.textContent = product.tag;
+    let name = document.createElement("p");
+    name.textContent = product.name;
 
-            let size = document.createElement("p");
-            size.textContent = product.size;
+    let tag = document.createElement("p");
+    tag.textContent = product.tag;
 
-            let review = document.createElement("p");
-            review.textContent = product.review;
+    let size = document.createElement("p");
+    size.textContent = product.size;
 
-            let price = document.createElement("p");
-            price.textContent = "₹"+product.price;
+    let review = document.createElement("p");
+    review.textContent = product.review;
 
-            let add_to_bag = document.createElement("button");
-            add_to_bag.innerHTML="ADD TO BAG";
+    let price = document.createElement("p");
+    price.textContent = "₹" + product.price;
 
-            add_to_bag.onclick = function(){
-                add_to_cart(product);
-            }
+    let add_to_bag = document.createElement("button");
+    add_to_bag.innerHTML = "ADD TO BAG";
 
-            div.append(img,tag,name,size,review,price,add_to_bag);
-
-            best_product_info.append(div);
-
-
-        });
+    add_to_bag.onclick = function () {
+      add_to_cart(product);
     }
 
-show_best_seller();
+    div.append(img, tag, name, size, review, price, add_to_bag);
 
-let gifts_info=document.getElementById("gifts_info");
- function show_gifts(){
-    gifts_section.forEach(function(gifts){
-         let div = document.createElement("div");
-
-            let img = document.createElement("img");
-            img.src = gifts.image;
-
-            let name = document.createElement("p");
-            name.textContent = gifts.name;
-
-            let tag = document.createElement("p");
-            tag.textContent = gifts.tag;
+    best_product_info.append(div);
 
 
-            let review = document.createElement("p");
-            review.textContent = gifts.review;
+  });
+}
 
-            let price = document.createElement("p");
-            price.textContent = gifts.price;
+show_best_seller(best_seller_product);
 
-            let add_to_bag = document.createElement("button");
-            add_to_bag.innerHTML="ADD TO BAG";
+let gifts_info = document.getElementById("gifts_info");
+function show_gifts() {
+  gifts_section.forEach(function (gifts) {
+    let div = document.createElement("div");
 
-            add_to_bag.onclick = function(){
-              add_to_cart(gifts);
-          }
+    let img = document.createElement("img");
+    img.src = gifts.image;
 
-            div.append(img,tag,name,review,price,add_to_bag);
+    let name = document.createElement("p");
+    name.textContent = gifts.name;
 
-            gifts_info.append(div);
+    let tag = document.createElement("p");
+    tag.textContent = gifts.tag;
 
 
-    });
+    let review = document.createElement("p");
+    review.textContent = gifts.review;
 
- }
+    let price = document.createElement("p");
+    price.textContent = gifts.price;
+
+    let add_to_bag = document.createElement("button");
+    add_to_bag.innerHTML = "ADD TO BAG";
+
+    add_to_bag.onclick = function () {
+      add_to_cart(gifts);
+    }
+
+    div.append(img, tag, name, review, price, add_to_bag);
+
+    gifts_info.append(div);
+
+
+  });
+
+}
 
 show_gifts();
 
-if(localStorage.getItem("f_cart")==null){
-    localStorage.setItem("f_cart",JSON.stringify([]));
-  }
-  
-  function add_to_cart(p){
-  
-    let products_cart = JSON.parse(localStorage.getItem("f_cart"));
-  
+if (localStorage.getItem("f_cart") == null) {
+  localStorage.setItem("f_cart", JSON.stringify([]));
+}
+
+function add_to_cart(p) {
+
+  let products_cart = JSON.parse(localStorage.getItem("f_cart"));
+
+  let Incart = true;
+  products_cart.forEach(function (el) {
+    if (el.name == p.name) {
+      el.qty++;
+      localStorage.setItem("f_cart", JSON.stringify(products_cart));
+      Incart = false;
+    }
+  });
+  if (Incart) {
     products_cart.push(p);
-  
-    localStorage.setItem("f_cart",JSON.stringify(products_cart));
-  
-    console.log(products_cart);
-   
-  
+
+    localStorage.setItem("f_cart", JSON.stringify(products_cart));
   }
+
+}
