@@ -1,253 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
-<style>
+
+    <style>
+        #slider_parent>img {
+            height: 400px;
+            width: 100%;
+        }
 
 
-#slider_parent > img{height:400px;width: 100%;}
+        #top_nav_bar {
 
-    
-    #top_nav_bar{
+            background-color: rgb(51, 51, 51);
+            color: white;
+            padding: 10px 0px;
+            position: static;
 
-        background-color: rgb(51,51,51);
-        color: white;
-        padding:10px 0px;
-        position:static;
-        
-        width: inherit;
-        margin-top: -10px;
-        margin-left: -10;
-        margin-right: -10;
-        top: 0;
-       z-index: 100;
-       font-family:"calibri";
-       font-size:12px;
-       font-weight: 400;
-       line-height: 12px;
-
-   
-    }
-
-    
-
-    #nav_middle{
-       
-        margin:auto;
-         
-     
-        padding-top: 15px;
-       
-        
-
-    }
+            width: inherit;
+            margin-top: -10px;
+            margin-left: -10;
+            margin-right: -10;
+            top: 0;
+            z-index: 100;
+            font-family: "calibri";
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 12px;
 
 
-    .center_text{text-align: center;}
+        }
 
 
-    #nav_middle{display: flex; margin: auto; padding: 25px 15px}
-    #nav_middle >div{display: flex ;margin:auto}
 
-    .logo >img{max-height: inherit; height: 120px;}
-   .left_item_navbar > div{margin-right: 25px;}
+        #nav_middle {
 
-    .right_item_navbar > div{margin-right: 25px; margin-left: 5px;}
+            margin: auto;
 
-    #nav_bottom{display:flex; margin:auto ;border-top: 1px solid #ebebeb;
-       border-bottom:1px solid #ebebeb;
 
-        width: 1200px;
+            padding-top: 15px;
 
-    }
-    #nav_bottom > div{margin:auto; }
 
-    #be_spoken_img_nav{margin-right: -12px;}
 
-    .nav{font-size: 11px;}
+        }
 
-</style>
+
+        .center_text {
+            text-align: center;
+        }
+
+
+        #nav_middle {
+            display: flex;
+            margin: auto;
+            padding: 25px 15px
+        }
+
+        #nav_middle>div {
+            display: flex;
+            margin: auto
+        }
+
+        .logo>img {
+            max-height: inherit;
+            height: 120px;
+        }
+
+        .left_item_navbar>div {
+            margin-right: 25px;
+        }
+
+        .right_item_navbar>div {
+            margin-right: 25px;
+            margin-left: 5px;
+        }
+
+        #nav_bottom {
+            display: flex;
+            margin: auto;
+            border-top: 1px solid #ebebeb;
+            border-bottom: 1px solid #ebebeb;
+
+            width: 1200px;
+
+        }
+
+        #nav_bottom>div {
+            margin: auto;
+        }
+
+        #be_spoken_img_nav {
+            margin-right: -12px;
+        }
+
+        .nav {
+            font-size: 11px;
+        }
+    </style>
 
 
 
 </head>
+
 <body>
 
 
-<div id="top_nav_bar" class="top_nav center_text">
+    <div id="top_nav_bar" class="top_nav center_text">
 
-    
-</div>
-
-
-<div id="nav_middle" class="nav">
-
-
-    <!-- left side store and currency converter -->
-    <div class="left_item_navbar">
-        <div>STORE</div>
-          <div class="currency_convert"> 
-           
-           
-            ₹  INR
-          
-
-
-         </div>
-
-    </div>
-
-     <!-- left side ends here -->
-
-     <!-- middle logo starts here -->
-    <div class="logo">
-    <img src="https://images.forestessentialsindia.com/pub/media/logo/stores/2/FE-Logo_1.png">
-    </div>
-
-     <!-- logo ends here -->
-
-    <div class="right_item_navbar">
-      <div>ACCOUNT</div>
-      <div>WISHLIST</div>
-      <div>ICON</div>
 
     </div>
 
 
+    <div id="nav_middle" class="nav">
 
-</div>
 
-<div id="nav_bottom" class="nav">
+        <!-- left side store and currency converter -->
+        <div class="left_item_navbar">
+            <div>STORE</div>
+            <div class="currency_convert">
 
-    <img id="be_spoken_img_nav" src="https://images.forestessentialsindia.com/pub/media/tech18/megamenu/images/megamenu/icon/f/e/resize/fe-new2.png">
-    
-    <div >
-        
-        BESPOKEN SERVICES
-    
+
+                ₹ INR
+
+
+
+            </div>
+
+        </div>
+
+        <!-- left side ends here -->
+
+        <!-- middle logo starts here -->
+        <div class="logo">
+            <img src="https://images.forestessentialsindia.com/pub/media/logo/stores/2/FE-Logo_1.png">
+        </div>
+
+        <!-- logo ends here -->
+
+        <div class="right_item_navbar">
+            <div>ACCOUNT</div>
+            <div>WISHLIST</div>
+            <div>ICON</div>
+
+        </div>
+
+
+
     </div>
-    <div> FACIAL CARE</div>
-    <div> BODY CARE</div>
-    <div>HAIR CARE</div>
-    <div> MAKEUP</div>
-    <div>WELLNESS</div>
-    <div>GIFTING</div>
-    <div>RITUALS </div>
-    <div>COLLECTIONS</div>
-    <div> DISCOVER</div>
+
+    <div id="nav_bottom" class="nav">
+
+        <img id="be_spoken_img_nav"
+            src="https://images.forestessentialsindia.com/pub/media/tech18/megamenu/images/megamenu/icon/f/e/resize/fe-new2.png">
+
+        <div>
+
+            BESPOKEN SERVICES
+
+        </div>
+        <div> FACIAL CARE</div>
+        <div> BODY CARE</div>
+        <div>HAIR CARE</div>
+        <div> MAKEUP</div>
+        <div>WELLNESS</div>
+        <div>GIFTING</div>
+        <div>RITUALS </div>
+        <div>COLLECTIONS</div>
+        <div> DISCOVER</div>
 
 
-</div>
-
-
-
-
-<!-- slider -->
-
-
-<div id="slider_parent">
-
-
-
-
-
-</div>
+    </div>
 
 
 
-<!-- slider ends -->
+
+    <!-- slider -->
 
 
-       
-
+    <div id="slider_parent">
 
 
 
 
 
+    </div>
 
 
 
-<script>
-
-
-var top_nav_text=[
-"Customize your cream now! Get started.",
-"Speak with certified ayurvedic doctors.Book Now!",
-"We are delivering across India and Internationally",
-]
-
-
-
-function top_nav(){
-    let nav_text=document.getElementById("top_nav_bar");
-    nav_text.textContent="Customize your cream now! Get started."
-
-    var count=0;
-     count++
-    setInterval(() => {
-        if(count==top_nav_text.length){count=0}
-        nav_text.textContent=top_nav_text[count]
-
-      count++  
-    }, 1000);
+    <!-- slider ends -->
 
 
 
 
-}
-
-top_nav();
 
 
 
-slider_images=[
-"https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/a/y/ayurvedic_consultation_desktop.jpg" ,
-"https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/b/m/bmo_ubtan_desktop.jpg",
-"https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/a/y/ayurvedic_consultation_desktop.jpg",
-"https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/m/e/mens_grooming_ritual_desktop.jpg"
 
 
 
-]
 
 
-let slider_parent=document.getElementById("slider_parent")
-
-function slider_show(){
-
-  let slides=document.createElement("img");
-  var count=0;
-  slides.src=slider_images[count];
+    <script>
 
 
-  slider_parent.append(slides)
-
-     count++
-    setInterval(() => {
-        if(count==slider_images.length){count=0}
-       slider_parent.innerHTML=null;
-
-       let slides=document.createElement("img");
-       slides.src=slider_images[count];
-
-       slider_parent.append(slides)
-
-
-      count++  
-    }, 4000);
+        var top_nav_text = [
+            "Customize your cream now! Get started.",
+            "Speak with certified ayurvedic doctors.Book Now!",
+            "We are delivering across India and Internationally",
+        ]
 
 
 
-}
-slider_show()
-    
-</script>
-    
+        function top_nav() {
+            let nav_text = document.getElementById("top_nav_bar");
+            nav_text.textContent = "Customize your cream now! Get started."
+
+            var count = 0;
+            count++
+            setInterval(() => {
+                if (count == top_nav_text.length) { count = 0 }
+                nav_text.textContent = top_nav_text[count]
+
+                count++
+            }, 1000);
+
+
+
+
+        }
+
+        top_nav();
+
+
+
+        slider_images = [
+            "https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/a/y/ayurvedic_consultation_desktop.jpg",
+            "https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/b/m/bmo_ubtan_desktop.jpg",
+            "https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/a/y/ayurvedic_consultation_desktop.jpg",
+            "https://images.forestessentialsindia.com/pub/media/mageplaza/bannerslider/banner/image/m/e/mens_grooming_ritual_desktop.jpg"
+
+
+
+        ]
+
+
+        let slider_parent = document.getElementById("slider_parent")
+
+        function slider_show() {
+
+            let slides = document.createElement("img");
+            var count = 0;
+            slides.src = slider_images[count];
+
+
+            slider_parent.append(slides)
+
+            count++
+            setInterval(() => {
+                if (count == slider_images.length) { count = 0 }
+                slider_parent.innerHTML = null;
+
+                let slides = document.createElement("img");
+                slides.src = slider_images[count];
+
+                slider_parent.append(slides)
+
+
+                count++
+            }, 4000);
+
+
+
+        }
+        slider_show()
+
+    </script>
+
 </body>
+
 </html>

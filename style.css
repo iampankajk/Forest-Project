@@ -9,6 +9,29 @@ body{
     box-sizing: border-box;
 }
   
+
+
+#top_nav_bar {
+
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding: 10px 0px;
+  position: static;
+
+  width: inherit;
+  margin-top: -10px;
+  margin-left: -10;
+  margin-right: -10;
+  top: 0;
+  z-index: 100;
+  font-family: "calibri";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+
+
+}
       
   .slide-container .prev,
   .slide-container .next {

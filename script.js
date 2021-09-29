@@ -1,3 +1,32 @@
+var top_nav_text = [
+  "Customize your cream now! Get started.",
+  "Speak with certified ayurvedic doctors.Book Now!",
+  "We are delivering across India and Internationally",
+]
+
+
+
+function top_nav() {
+  let nav_text = document.getElementById("top_nav_bar");
+  nav_text.textContent = "Customize your cream now! Get started."
+
+  var count = 0;
+  count++
+  setInterval(() => {
+      if (count == top_nav_text.length) { count = 0 }
+      nav_text.textContent = top_nav_text[count]
+
+      count++
+  }, 1000);
+
+
+
+
+}
+
+top_nav();
+
+
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
