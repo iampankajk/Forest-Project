@@ -5,6 +5,9 @@ var top_nav_text = [
 ]
 
 
+function cart(){
+  console.log("hello");
+}
 
 function top_nav() {
   let nav_text = document.getElementById("top_nav_bar");

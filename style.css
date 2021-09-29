@@ -72,6 +72,7 @@ a {
 }
 
 .page_content>div:nth-child(3)>span {
+  cursor: pointer;
   margin-left: 30px;
 }
 
@@ -87,6 +88,18 @@ a {
 #logo {
   width: 33%;
   margin-left: 30%;
+}
+
+#cart_total{
+  cursor: pointer;
+  text-align: center;
+  padding: 3px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: #FBF9F9;
+  border-radius: 50%;
 }
 .nav_sections{
   width: 1200px;
