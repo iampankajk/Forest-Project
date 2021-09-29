@@ -344,3 +344,26 @@ max-width: 100%;
 a{
   color-adjust: #333;
 }
+
+#gifts_info{
+  display: flex;
+  gap: 10px;
+
+} 
+#gifts_info>div{
+  flex-basis: 250px;
+  font-size: 15px;
+  font-weight: 300;
+  margin: auto;
+  background-color: rgb(243, 243, 243);
+  
+}
+#gifts_info>div>button{
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  background-color: transparent;
+  margin-left: 5px;
+  border: solid 1px black;
+
+}
