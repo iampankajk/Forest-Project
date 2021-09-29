@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+        .sticky_header {
+            background-color: #FBF9F9;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: "calibri";
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .page_content {
+            width: 1200px;
+            display: flex;
+            margin: auto;
+            gap: 1px;
+
+        }
+
+        .hr {
+            margin: 0px auto;
+            width: 1200px;
+        }
+
+        .page_content>div {
+            flex-basis: 400px;
+            margin: auto;
+            padding: 5px;
+        }
+
+        .page_content>div>span {
+            margin: auto 10px;
+        }
+
+        .page_content>div:nth-child(3)>span {
+            margin-left: 30px;
+        }
+
+        .page_content>div:nth-child(2)>span {
+            margin-left: 30px;
+        }
+
+        .page_content>div>span>button {
+            background-color: transparent;
+            border: none;
+        }
+
+        #logo {
+            width: 33%;
+            margin-left: 30%;
+        }
+
+        .nav_sections {
+            width: 1200px;
+            margin: auto;
+        }
+
+        .nav_sections ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav_sections ul li {
+            margin: auto;
+            padding: 10px;
+            background-color: #FBF9F9;
+        }
+
+        .row {
+            display: flex;
+            margin: 20px auto;
+        }
+
+        .row>div {
+            flex-basis: 500px;
+            margin: auto;
+        }
+
+        .row>div>img {
+            width: 600px;
+            margin: auto;
+        }
+
+        .mega_box {
+            position: absolute;
+            width: 100%;
+            display: none;
+            background-color: #FBF9F9;
+            right: 0;
+
+        }
+
+        .nav_sections ul li:hover .mega_box {
+            display: block;
+            background-color: #FBF9F9;
+            margin: auto;
+        }
+
+        .col-1 ul,
+        .col-2 ul {
+            display: block;
+        }
+
+        .col-1,
+        .col-2 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sticky_header">
+        <div class="page_header">
+            <div class="page_content">
+                <div>
+                    <span><img src="images\search-icon.png" alt=""></span>
+                    <span> <a href="#">STORES</a></span>
+                    <span>
+                        ₹ <button>INR V</button>
+                    </span>
+                </div>
+                <div>
+                    <span><img src="images\FE-Logo_1.png" alt="" id="logo"></span>
+                </div>
+                <div>
+                    <span> <a href="#">ACCOUNT</a></span>
+                    <span>
+                        <a href="#">WISHLIST</a>
+                    </span>
+                    <span><img src="images\cart-icon.png" alt=""></span>
+                </div>
+            </div>
+            <div class="hr">
+                <hr>
+            </div>
+
+        </div>
+        <div class="nav_sections">
+            <ul>
+                <li>
+                    <img src="images\fe-new2.png" alt="">
+                </li>
+                <li>
+                    <a href="">BESPOKEN SERVICES</a>
+                    <div class="mega_box">
+                        <div class="content">
+                            <div class="row">
+                                <div>
+                                    <img src="images\Ayurvedic-Consult-Top-Nav.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="images\Customised_Cream_764x188.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="">FACIAL CARE</a>
+                    <div class="mega_box">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-1">
+                                    <header>SHOP BY CATEGORY</header>
+                                    <ul>
+
+                                        <li>CLEANSERS</li>
+                                        <li>TONERS</li>
+                                    </ul>
+                                </div>
+                                <div class="col-2">
+                                    <header>SHOP BY CONCERN</header>
+                                    <ul>
+                                        <li>ACNE</li>
+                                        <li>DRYNESS</li>
+                                        <li>DULLNESS</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <a href=""> BODY CARE</a>
+                </li>
+                <li>
+                    <a href="">HAIR CARE</a>
+                </li>
+                <li>
+                    MAKEUP
+                </li>
+                <li>
+                    WELLNESS
+                </li>
+                <li>
+                    GIFTING
+                </li>
+                <li>
+                    RITUALS
+                </li>
+                <li>
+                    COLLECTIONS
+                </li>
+                <li>
+                    DISCOVER
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let menu = document.getElementsByClassName("item2_container");
+    function display_menus() {
+
+
+        menu.style.display = "block";
+    }
+</script>

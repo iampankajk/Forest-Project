@@ -32,6 +32,109 @@ body{
 
 
 }
+
+.sticky_header {
+  background-color: #FBF9F9;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "calibri";
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page_content {
+  width: 1200px;
+  display: flex;
+  margin: auto;
+  gap: 1px;
+
+}
+
+.hr {
+  margin: 0px auto;
+  width: 1200px;
+}
+
+.page_content>div {
+  flex-basis: 400px;
+  margin: auto;
+  padding: 5px;
+}
+
+.page_content>div>span {
+  margin: auto 10px;
+}
+
+.page_content>div:nth-child(3)>span {
+  margin-left: 30px;
+}
+
+.page_content>div:nth-child(2)>span {
+  margin-left: 30px;
+}
+
+.page_content>div>span>button {
+  background-color: transparent;
+  border: none;
+}
+
+#logo {
+  width: 33%;
+  margin-left: 30%;
+}
+.nav_sections{
+  width: 1200px;
+  margin: auto;
+
+}
+.nav_sections ul{
+ display: flex;
+ list-style: none;
+
+}
+.nav_sections ul li{
+ margin: auto;
+ padding: 10px;
+ background-color: #FBF9F9;
+ z-index: 999;
+
+}
+.row{
+ display: flex;
+ margin: 20px auto;
+}
+.row>div{
+ flex-basis: 500px;
+ margin: auto;
+}
+.row>div>img{
+ width: 600px;
+ margin: auto;
+}
+.mega_box{
+ position: absolute;
+ width: 100%;
+ display: none;
+ background-color: #FBF9F9;
+ right: 0;
+ 
+}
+
+.nav_sections ul li:hover .mega_box{
+ display: block;
+ background-color: #FBF9F9;
+ margin: auto;
+}
+.col-1 ul,.col-2 ul{
+ display: block;
+}
+.col-1,.col-2{
+ margin: 0;
+}
       
   .slide-container .prev,
   .slide-container .next {
