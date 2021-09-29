@@ -1,3 +1,47 @@
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+const init = (n) => {
+  slides.forEach((slide, index) => {
+    slide.style.display = "none";
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active");
+    });
+  });
+  slides[n].style.display = "block";
+  dots[n].classList.add("active");
+};
+document.addEventListener("DOMContentLoaded", init(currentSlide));
+const next = () => {
+  currentSlide >= slides.length - 1 ? (currentSlide = 0) : currentSlide++;
+  init(currentSlide);
+};
+
+const prev = () => {
+  currentSlide <= 0 ? (currentSlide = slides.length - 1) : currentSlide--;
+  init(currentSlide);
+};
+
+document.querySelector(".next").addEventListener("click", next);
+
+document.querySelector(".prev").addEventListener("click", prev);
+
+setInterval(() => {
+  next();
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    console.log(currentSlide);
+    init(i);
+    currentSlide = i;
+  });
+});
+
+
+
+
 let best_seller_product = [{"name":"Delicate Facial Cleanser Kashmiri Saffron & Neem","tag":"BESTSELLER","size":"200 ml","review":"4.7/5 (140 REVIEWS)","price":"1,395.00","image":"images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png"},
     {"name":"Soundarya Radiance Cream With 24K Gold & SPF25","tag":"BESTSELLER","size":"50 g","review":"4.7/5 (119 REVIEWS)","price":"5,400.00","image":"images/8842_soundarya_radiance_cream_50g_front.png"},
     {"name":"Hand Pounded Organic Fruit Scrub","tag":"BESTSELLER","size":"50 g","review":"4.8/5 (29 REVIEWS)","price":"1,950.00","image":"images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png"},

@@ -1,4 +1,6 @@
 body{
+    padding: 0;
+    margin: 0;
     font-family: "calibri";
     font-weight: 400;
     color: #333;
@@ -6,6 +8,95 @@ body{
     font-size: 1.4rem;
     box-sizing: border-box;
 }
+  
+      
+  .slide-container .prev,
+  .slide-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    opacity: .7;
+    display: none;
+  }
+  .slide-container:hover .imageNext{
+      display: block;
+      right: 2px;
+  }
+  .slide-container:hover .imagePrev{
+      display: block;
+      left: 2px;
+  }
+  .slide-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+  }
+  .slide-container:hover .dots-container{
+      display: flex;
+  }
+  
+  .dots-container {
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    display: none;
+  }
+  .dots-container :hover{
+      display: block;
+  }
+  
+  .dots-container .dot {
+    cursor: pointer;
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  
+  .dots-container .dot.active {
+    background-color: white;
+  }
+  
+  * {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  body h1 {
+    text-align: center;
+  }
+  
+  .slide-container .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .slide-container .slide img {
+    width: 100%;
+  }
+  @media screen and (min-width: 1024px) {
+      .slide-container{
+          display: flex;
+      }
+  }
 
 .best_seller_product{
     padding-bottom: 60px;
