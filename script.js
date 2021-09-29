@@ -5,7 +5,7 @@ var top_nav_text = [
 ]
 
 
-function cart(){
+function cart() {
   console.log("hello");
 }
 
@@ -74,10 +74,10 @@ dots.forEach((dot, i) => {
 
 
 
-let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png","qty":1 },
-{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png","qty":1 },
-{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png","qty":1 },
-{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png","qty":1 },
+let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png", "qty": 1 },
+{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png", "qty": 1 },
+{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png", "qty": 1 },
+{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png", "qty": 1 },
 ];
 
 let gifts_section = [
@@ -188,4 +188,21 @@ function add_to_cart(p) {
     localStorage.setItem("f_cart", JSON.stringify(products_cart));
   }
 
+  total_quantity();
+
 }
+
+
+function total_quantity() {
+  let cart_total = document.getElementById("cart_total");
+  let items = JSON.parse(localStorage.getItem("f_cart"));
+  let total_items = 0;
+  items.forEach(function (p) {
+    total_items = total_items + p.qty;
+  });
+
+  cart_total.innerHTML = total_items;
+}
+
+
+total_quantity();
