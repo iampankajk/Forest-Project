@@ -81,11 +81,11 @@ let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron 
 ];
 
 let gifts_section = [
-  { "image": "images/lek_box_2.png", "name": "FACIAL CARE SELECTION BOX ", "tag": "GIFTING", "review": "4.6/5(9 Review)", "price": "₹2,575.00", "qty": 1 },
-  { "image": "images/mens_box.png", "name": "GENTELMEN'S BOX ", "tag": "GIFTING", "review": "5/5(1 Review)", "price": "₹4,075.00", "qty": 1 },
+  { "image": "images/lek_box_2.png", "name": "FACIAL CARE SELECTION BOX ", "tag": "GIFTING", "review": "4.6/5(9 Review)", "price": "2,575.00", "qty": 1 },
+  { "image": "images/mens_box.png", "name": "GENTELMEN'S BOX ", "tag": "GIFTING", "review": "5/5(1 Review)", "price": "4,075.00", "qty": 1 },
 
-  { "image": "images/evening_ritual_box.png", "name": "EVENING RITUAL GIFT BOX ", "tag": "GIFTING", "review": "4.5/5(1 Review)   ", "price": "₹4,950.00", "qty": 1 },
-  { "image": "images/morning_ritual_box.png", "name": "MORNING RITUAL  GIFT BOX ", "tag": "GIFTING", "review": "4.6/5(1 Review)    ", "price": "₹4,895.00", "qty": 1 }];
+  { "image": "images/evening_ritual_box.png", "name": "EVENING RITUAL GIFT BOX ", "tag": "GIFTING", "review": "4.5/5(1 Review)   ", "price": "4,950.00", "qty": 1 },
+  { "image": "images/morning_ritual_box.png", "name": "MORNING RITUAL  GIFT BOX ", "tag": "GIFTING", "review": "4.6/5(1 Review)    ", "price": "4,895.00", "qty": 1 }];
 
 let best_product_info = document.getElementById("best_product_info");
 function show_best_seller(best_seller_product) {
@@ -146,7 +146,7 @@ function show_gifts() {
     review.textContent = gifts.review;
 
     let price = document.createElement("p");
-    price.textContent = gifts.price;
+    price.textContent = "₹" + gifts.price;
 
     let add_to_bag = document.createElement("button");
     add_to_bag.innerHTML = "ADD TO BAG";
