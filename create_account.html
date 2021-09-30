@@ -513,7 +513,7 @@ margin: 0;
             <span class="span", style="color: red">  * Required Fields</span>
           </div>
           <div>
-           <button type="submit"> <a href="accounts.html">CREATE ACCOUNT</a></button>  
+           <button type="submit"> CREATE ACCOUNT</button>  
        
            </div>   
       </form>
@@ -532,8 +532,8 @@ margin: 0;
     let email=signup_form.email.value;
     let password=signup_form.password.value;
     let comfirm_password=signup_form.comfirm_password.value;
-      if (localStorage.getItem("F_users")==null){
-          localStorage.setItem("F_users",JSON.stringify([]));
+      if (localStorage.getItem("f_users")==null){
+          localStorage.setItem("f_users",JSON.stringify([]));
       }
 
     let user={
@@ -541,10 +541,10 @@ margin: 0;
         email,
         password
     };
-    let arr=JSON.parse(localStorage.getItem("F_users"));
+    let arr=JSON.parse(localStorage.getItem("f_users"));
       arr.push(user);
-      localStorage.setItem("F_users",JSON.stringify(arr))
-    
+      localStorage.setItem("f_users",JSON.stringify(arr))
+        window.location.href="accounts.html"
     }
 
     var top_nav_text = [
