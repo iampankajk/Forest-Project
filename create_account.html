@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW USER</title><style>
+      
+       
+         body{
+            font-family: "calibri";
+            font-weight: 400;
+            color: rgb(119, 118, 118);;
+            line-height: 1.42857143;
+            font-size: 1.4rem;
+            box-sizing: border-box;
+        }
+ .span{
+            display: block;
+            font-size: 15px ;
+            font-weight: 400;
+        }
+        .span::after{
+            display: block;
+            content: " ";
+        }
+       
+        h2{
+            font-weight: 400;
+            text-align: left;
+        }
+  #container{
+      margin:0% 20% 0% 20%;
+      
+  }  button{
+            width: 92%;
+            padding: 20px;
+            background-color: transparent;
+          
+            border: solid 1px rgb(51, 51, 51);
+          
+        }  
+    button:hover{
+        color:white;
+      background-color: black;
+ }
+
+input{
+           width: 300px;
+            padding: 20px;
+            background-color: transparent;
+            border: solid 1px rgb(190, 190, 190);
+
+}
+#signup_form{
+    width:100%;
+}
+
+#signup_form>div{
+     width:100%;
+     display:inline-Block;
+     margin:3% 0% 3% 0%;
+}
+#signup_form>div>div{
+   display:inline-Block;
+   width:49%;
+  
+}
+hr{
+    width:92%;
+    margin:0;
+    color:rgb(245, 245, 245)
+}
+.select_title{
+    
+            width: 42.5%;
+            padding: 20px;
+            background-color: transparent;
+            border: solid 1px rgb(190, 190, 190);
+
+}
+.redcolor{
+    color:red;
+
+}
+#setwidth{
+    width:88%;
+}
+h2{
+    color:#333;
+}
+
+    </style>
+</head>
+<body>
+   
+    
+   
+        <div id="container"> 
+
+            <h2>Create An Account</h2>
+
+            <p></p>
+            <p></p>
+            <p></p>
+                
+             <form onsubmit="signup(event)"  id="signup_form" action=""> 
+                <span class="span">PERSONAL INFORMATION</span>
+                <p></p>
+                <hr>
+                <p></p>
+
+                  <div>
+                     <span class="span">TITLE  </span><p></p>
+                     <select class="select_title" title="Title">
+                        <option value="">PLEASE SELECT</option>                 
+                        <option value=" "></option>
+                        <option value="Mr.">Mr.  </option>                
+                        <option value="Ms">Ms   </option> 
+                        <option value="Mrs">Mrs </option>                                  
+                    </select>                    
+              
+                 </div>
+                 <div>
+                <div>
+                      <span class="span">FIRST NAME<span class="redcolor">* </span>
+                      <p></p>
+                      <input id="fname" type="text" placeholder=""/>
+                 </div>
+                  <div>
+                      <span class="span"> SECOND NAME <span class="redcolor">*</span>
+                      <p></p>
+                      <input id="sname" type="text" placeholder=""/>
+                     </div>
+        </div>
+          <div>
+            <span class="span"> EMAIL<span class="redcolor">*</span> </span>
+             <p></p>
+                  <input id="email" type="email" placeholder=""/>
+          </div>
+          <div>
+            <span class="span"> PHONE NUMBER  <span class="redcolor">*</span> </span>
+             <p></p>
+            <input id="setwidth" type="text" placeholder=""/>
+           </div>
+          <div>
+            <span class="span">SECURITY</span>
+            <p></p>
+            <hr>
+            <p></p>
+           
+            <div>  <span class="span"> PASSWORD <span class="redcolor">*</span> </span><p></p><input id="password" type="password" placeholder=""/> </div>
+            <div> <span class="span">CONFIRM PASSWORD <span class="redcolor">*</span> </span><p></p> <input id="comfirm_password" type="password" placeholder=""/></div>
+        </div>
+       
+          <div>
+            <span class="span", style="color: red">  * Required Fields</span>
+          </div>
+          <div>
+           <button type="submit"> CREATE ACCOUNT </button>  
+
+           </div>   
+      </form>
+    <div>
+</body>
+</html><script>
+    
+    
+    function signup(e){  
+        e.preventDefault();
+
+    let signup_form=document.getElementById("signup_form")   
+    console.log(signup_form) 
+    let fname=signup_form.fname.value;
+    let sname=signup_form.sname.value;
+    let email=signup_form.email.value;
+    let password=signup_form.password.value;
+    let comfirm_password=signup_form.comfirm_password.value;
+      if (localStorage.getItem("F_users")==null){
+          localStorage.setItem("F_users",JSON.stringify([]));
+
+      }
+
+    let user={
+        name,
+        email,
+        password
+    };
+    let arr=JSON.parse(localStorage.getItem("F_users"));
+      arr.push(user);
+      localStorage.setItem("F_users",JSON.stringify(arr))
+    
+    }
+   
+
+</script>
