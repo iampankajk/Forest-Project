@@ -27,11 +27,21 @@
           <span><a href="index.html"><img src="images\FE-Logo_1.png" alt="" id="logo"></a></span>
         </div>
         <div>
-          <span> <a href="#">ACCOUNT</a></span>
+          <span> <a href="accounts.html">ACCOUNT</a></span>
           <span>
             <a href="#">WISHLIST</a>
           </span>
-          <span><a onclick="cart()"><img src="images\cart-icon.png" alt=""><span id="cart_total">0</span></a></span>
+          <span><a onclick="show_cart()"><img src="images\cart-icon.png" alt=""><span
+                id="cart_total">0</span></a></span>
+          <div id="cart_container">
+            <div id="cart_show">
+              <span><a onclick="close_cart()"><img src="images\cross-icon.svg" alt=""></a></span>
+            </div>
+
+            <span><button>GO TO BAGS</button></span>
+
+          </div>
+
         </div>
       </div>
       <div class="hr">
@@ -60,6 +70,8 @@
             </div>
 
           </div>
+
+
         </li>
         <li>
           <a href="">FACIAL CARE</a>
@@ -166,6 +178,9 @@
 
 
 
+  <!----Middle Nav End-->
+
+
   <div class="best_seller_product">
     <div id="best_seller_page_h2">
       <h2>
@@ -182,19 +197,19 @@
 
     </div>
     <div id="filter_options">
-          <input type="checkbox" name="facial" value="facial care" class="input_value">
-          <label for="facial"> FACIAL CARE</label><br>
-          <input type="checkbox" name="hair" value="hair care" class="input_value">
-          <label for="hair"> HAIR CARE</label><br>
-          <input type="checkbox" name="body" value="body care" class="input_value">
-          <label for="body"> BODY CARE</label><br>
-          <input type="checkbox" name="makeup" value="makeup" class="input_value">
-          <label for="makeup"> MAKEUP</label><br>
-          <input type="checkbox" name="gifts" value="gifts" class="input_value">
-          <label for="gifts"> GIFTS</label><br>
-          <input type="checkbox" name="rituals" value="rituals" class="input_value">
-          <label for="rituals">RITUALS</label><br>
-          <button onclick="filter_catergory()">Apply</button>
+      <input type="checkbox" name="facial" value="facial care" class="input_value">
+      <label for="facial"> FACIAL CARE</label><br>
+      <input type="checkbox" name="hair" value="hair care" class="input_value">
+      <label for="hair"> HAIR CARE</label><br>
+      <input type="checkbox" name="body" value="body care" class="input_value">
+      <label for="body"> BODY CARE</label><br>
+      <input type="checkbox" name="makeup" value="makeup" class="input_value">
+      <label for="makeup"> MAKEUP</label><br>
+      <input type="checkbox" name="gifts" value="gifts" class="input_value">
+      <label for="gifts"> GIFTS</label><br>
+      <input type="checkbox" name="rituals" value="rituals" class="input_value">
+      <label for="rituals">RITUALS</label><br>
+      <button onclick="filter_catergory()">Apply</button>
     </div>
     <div class="container">
       <div id="best_product_info">
@@ -237,11 +252,11 @@
   top_nav();
 
 
-  let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png", "qty": 1,"description":"The secret to proper cleansing is to remove dead cells, toxins and make up, and clear clogged pores, without stripping the skin’s natural oil and moisture content. Following this philosophy, the Forest Essentials Delicate Facial Cleanser Kashmiri Saffron & Neem is an ideal gentle and natural alternative to harsh sulphate infused cleansers, and is especially designed to treat sensitive, acne prone and oily skin. This Ayurvedic facial cleanser is infused with purifying herbs including Neem and Kewda to deeply cleanse the skin, while leaving it glowing and balanced after each use." ,"category":"facial care"},
-{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png", "qty": 1, "description":"Ayurveda speaks of flawless skin as lustrous, smooth, firm and elastic, with a golden sheen. The Forest Essentials Soundarya Radiance Cream With 24K Gold & SPF25 is an exceptionally rich yet light textured face cream that incorporates a combination of precious herbs and real 24 Karat Gold, which helps to restore the firmness of the skin, giving it a natural facelift. This face moisturizer comes with SPF 25 that helps neutralize UVA and UVB radiation and protects the skin from sun damage, environmental stressors and pollution. The Soundarya Cream has been awarded as the 'Best Moisturizer' by Elle India and as the 'Best Anti-Aging Cream' by Asia Spa." ,"category":"body care"},
-{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png", "qty": 1, "description": "The Forest Essentials Hand Pounded Organic Fruit Scrub is a nourishing face exfoliator, hand-pounded to the right consistency and blended with fresh organically grown Dates and Peaches, which are excellent antioxidants and improve the skin's elasticity. It is infused with Apricot Kernel oil which nourishes, softens and restores collagen production in the skin. This Ayurvedic face exfoliator also contains pure raw Honey, a natural antioxidant that protects the skin from sun damage, replenishes the skin's moisture, and absorbs impurities from the pores, making it an ideal exfoliating face scrub.","category":"makeup"},
-{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png", "qty": 1, "description": "For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.","category":"hair care"},
-];
+  let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png", "qty": 1, "description": "The secret to proper cleansing is to remove dead cells, toxins and make up, and clear clogged pores, without stripping the skin’s natural oil and moisture content. Following this philosophy, the Forest Essentials Delicate Facial Cleanser Kashmiri Saffron & Neem is an ideal gentle and natural alternative to harsh sulphate infused cleansers, and is especially designed to treat sensitive, acne prone and oily skin. This Ayurvedic facial cleanser is infused with purifying herbs including Neem and Kewda to deeply cleanse the skin, while leaving it glowing and balanced after each use.", "category": "facial care" },
+  { "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png", "qty": 1, "description": "Ayurveda speaks of flawless skin as lustrous, smooth, firm and elastic, with a golden sheen. The Forest Essentials Soundarya Radiance Cream With 24K Gold & SPF25 is an exceptionally rich yet light textured face cream that incorporates a combination of precious herbs and real 24 Karat Gold, which helps to restore the firmness of the skin, giving it a natural facelift. This face moisturizer comes with SPF 25 that helps neutralize UVA and UVB radiation and protects the skin from sun damage, environmental stressors and pollution. The Soundarya Cream has been awarded as the 'Best Moisturizer' by Elle India and as the 'Best Anti-Aging Cream' by Asia Spa.", "category": "body care" },
+  { "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png", "qty": 1, "description": "The Forest Essentials Hand Pounded Organic Fruit Scrub is a nourishing face exfoliator, hand-pounded to the right consistency and blended with fresh organically grown Dates and Peaches, which are excellent antioxidants and improve the skin's elasticity. It is infused with Apricot Kernel oil which nourishes, softens and restores collagen production in the skin. This Ayurvedic face exfoliator also contains pure raw Honey, a natural antioxidant that protects the skin from sun damage, replenishes the skin's moisture, and absorbs impurities from the pores, making it an ideal exfoliating face scrub.", "category": "makeup" },
+  { "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png", "qty": 1, "description": "For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.", "category": "hair care" },
+  ];
 
   let best_product_info = document.getElementById("best_product_info");
   function show_best_seller(best_seller_product) {
@@ -308,6 +323,7 @@
     total_quantity();
   }
 
+  // total quantity of cart
 
   function total_quantity() {
     let cart_total = document.getElementById("cart_total");
@@ -320,7 +336,9 @@
     cart_total.innerHTML = total_items;
   }
 
-total_quantity();
+  total_quantity();
+
+  // sorting function
 
   function sort_products() {
     let value = document.getElementById("op").value;
@@ -367,35 +385,108 @@ total_quantity();
 
   sort_products();
 
-
+  // filter function--------
   let filter_count = 0;
-    function filter_form(){
-      if(filter_count==0){
-        document.getElementById("filter_options").style.display="block";
-        filter_count++;
-      }else if(filter_count==1){
-        document.getElementById("filter_options").style.display="none";
-        filter_count=0;
-    
-      }
-    }
+  function filter_form() {
+    if (filter_count == 0) {
+      document.getElementById("filter_options").style.display = "block";
+      filter_count++;
+    } else if (filter_count == 1) {
+      document.getElementById("filter_options").style.display = "none";
+      filter_count = 0;
 
-  function filter_catergory(){
+    }
+  }
+
+  function filter_catergory() {
     best_product_info.innerHTML = "";
-    let filter_options =document.getElementsByClassName("input_value");
-    let f_cart=JSON.parse(localStorage.getItem("f_cart"));
+    let filter_options = document.getElementsByClassName("input_value");
+    let f_cart = JSON.parse(localStorage.getItem("f_cart"));
     console.log(filter_options[0].value);
     let data = [];
-    f_cart.forEach(function(a){
-      if(a.category==filter_options[0].value || a.category==filter_options[1].value || a.category==filter_options[2].value || a.category==filter_options[3].value || a.category==filter_options[4].value || a.category==filter_options[5].value){
+    f_cart.forEach(function (a) {
+      if (a.category == filter_options[0].value || a.category == filter_options[1].value || a.category == filter_options[2].value || a.category == filter_options[3].value || a.category == filter_options[4].value || a.category == filter_options[5].value) {
         data.push(a);
       }
     });
-    
+
     console.log(data);
-    document.getElementById("filter_options").style.display="none";
+    document.getElementById("filter_options").style.display = "none";
     show_best_seller(data);
-   
-      
- }
+
+
+  }
+
+  // show products on bag function
+
+  let show_count = 0;
+  function show_cart() {
+    if (show_count == 0) {
+      document.getElementById("cart_container").style.display = "block";
+      show_count++;
+    } else if (show_count == 1) {
+      document.getElementById("cart_container").style.display = "none";
+      show_count = 0;
+
+    }
+
+  }
+
+  function close_cart() {
+    document.getElementById("cart_container").style.display = "none";
+  }
+
+  let cart_items = JSON.parse(localStorage.getItem("f_cart"));
+  let cart_show = document.getElementById("cart_show");
+  function create() {
+    let total_div = document.createElement("div");
+    cart_show.append(total_div);
+    let total = 0;
+    cart_items.forEach(function (item) {
+      let container = document.createElement("div");
+
+      container.setAttribute("class", "wrapper");
+
+      let img_div = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = item.image;
+
+      img_div.append(img);
+
+      let text_div = document.createElement("div");
+      let name = document.createElement("p");
+
+      name.textContent = item.name;
+
+      let price_quantity = document.createElement("p");
+
+      console.log(item.price);
+
+      let price_num = "";
+
+      for (let i = 0; i < item.price.length; i++) {
+        if (item.price[i] != ",") {
+          price_num += item.price[i];
+        }
+      }
+
+      total = total + parseInt(price_num) * item.qty;
+
+      price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
+      text_div.append(name, price_quantity);
+
+      container.append(img_div, text_div);
+
+      cart_show.append(container);
+    });
+
+    total_div.innerHTML = "CART SUBTOTAL " + " ₹" + total;
+    total_div.style.margin = "10px 0px 0px 10px"
+
+  }
+
+  create();
+
+
+
 </script>
