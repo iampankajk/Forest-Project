@@ -346,6 +346,7 @@ a {
 }  
 .container>h2{
     font-weight: 400;
+    margin-top: 5rem;
 }
 #best_seller_page_h2>h2{
   text-align: center;
@@ -382,16 +383,98 @@ a {
   color: #333; 
 }
 
-#category{
-  display:flex;  
-  gap: 10px;
-  justify-content:center; 
+
+/* OWL - Carousel */
+
+
+.owl-container {
+  max-width: 90%;
+  margin-left: -1rem;
 }
-#category img {
+
+.item {
+
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.owl-item{
+  margin-right: 20px;
+}
+
+.item h4 {
+  font-size: 2rem;
+}
+
+
+.owl-next {
+  position: absolute;
+  top: 25%;
+  right: -2rem;
+}
+.owl-prev {
+  position: absolute;
+  top: 25%;
+  left: -2rem;
+}
+.owl-prev > img{
+  width: 18px;
+}
+.owl-next > img{
+  width: 18px;
+}
+
+.owl-nav .owl-prev:hover, .owl-nav .owl-next:hover {
+  background: none !important;
+  outline: none !important;
+  opacity: 1;
+}
+
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  outline: none;
+  opacity: 0.6;
+  transition: all .5s ease;
+}
+
+.owl-dots {
+  margin-top: 1rem;
+}
+
+.owl-dot {
+  outline: none;
+}
+
+.owl-dot.active, .owl-dot:hover {
+  transition: all .2s ease;
+  transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 600px) {
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    display: none;
+  }
+}
+
+
+#category{
+  margin-top: 5rem;
+  margin:auto;
+  width: 113%;
+ 
+}
+.item img {
 max-width: 100%;
+margin-bottom: 2rem;
 
 }
-#category>div{
+.item > div{
   margin: auto;
   flex-basis: 300px;
   font-size: 15px;
@@ -404,7 +487,6 @@ max-width: 100%;
   left:10%;
   float: left;
   font-size: 15px ;
-  
   color: #333;
   
 }
