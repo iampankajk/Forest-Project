@@ -590,7 +590,12 @@
     let arr = JSON.parse(localStorage.getItem("f_users"));
     arr.push(user);
     localStorage.setItem("f_users", JSON.stringify(arr))
-    window.location.href = "accounts.html"
+    if(user.email.length<1 && user.password<1){
+        alert("Complete form");
+    }else{
+      window.location.href = "accounts.html"
+    }
+    
   }
 
   var top_nav_text = [
