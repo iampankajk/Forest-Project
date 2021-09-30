@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            font-family: "calibri";
+            font-weight: 400;
+            color: #333;
+            line-height: 1.42857143;
+            font-size: 1.4rem;
+            box-sizing: border-box;
+        }
+ .span{
+            display: block;
+            font-size: 15px ;
+            font-weight: 400;
+        }
+        .span::after{
+            display: block;
+            content: " ";
+        }
+       
+        h2{
+            font-weight: 400;
+            text-align: left;
+        }
+  #container{
+      margin:0% 20% 0% 20%;
+      
+  }  button{
+            width: 300px;
+            padding: 20px;
+            background-color: transparent;
+          
+            border: solid 1px black;
+        }  
+    button:hover{
+      background-color: black;
+ }
+
+input{
+    width: 300px;
+            padding: 20px;
+            background-color: transparent;
+            border: solid 1px black;
+
+}
+#container>div{
+   display:inline-Block;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id=container>
+    <h2>Welcome Please Sign In</h2> 
+    <p></p>
+    <p></p>
+    <p></p>
+        <span class="span">EXISTING USER</span>
+        <hr>
+    
+       
+        <div>
+        <form onsubmit="signin(event)"id="signin_form" action="">
+            <div>
+            <input id="email" type="email" placeholder="Email id"/>
+             </div>
+            <div>
+             <input id="password" type="password" placeholder="Password"/>
+             </div>
+              <div>
+              <button type="submit">signin</button> 
+             </div>   
+        </div>  
+        </form>
+        <span class="span">NEW USER</span>
+        <a href="create_account"><button>Create New Account</button> </a>
+        </div>
+
+</body>
+</html><script>
+   
+
+
+
+    function signin(e){
+        e.preventDefault();
+        let signin_form= document.getElementById("signin_form");
+          let email= signin_form.email.value;
+          let password = signin_form.password.value;
+          let all_users=JSON.parse(localStorage.getItem("F_users"));
+          all_users.forEach(function(user){
+              console.log("user:",user);
+        if(email===user.email && password=== user.password){
+            window.location.href="bobby.html";
+        }
+    }); 
+   }
+
+
+</script>
