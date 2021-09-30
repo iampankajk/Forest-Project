@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+     .main{margin:auto; display: flex; padding:20px 120px}
+
+     .row1 >div >div{cursor: pointer;}
+
+     div{border: 1px solid red}
+     
+  .summary-box>div{display:flex}
+  .summary-box>div>div{margin:auto}
+       
+body{font-size: 12px;}
+.row1{display:flex}
+#qty-div{display:flex}
+
+#btn{display:none}
+
+    </style>
+</head>
+<body>
+
+
+    <div class="main">
+
+<!-- Basket column start -->
+
+   
+   <div class="col" id="basket_item_body">
+    <h1>Basket</h1>
+    <p id="empty-cart-notice">You have no items in your shopping cart.
+
+        <a>Click here</a> to continue shopping.</p>
+    
+    <div id="basket_parent">
+
+
+     </div>
+  
+   </div>
+
+
+<!-- basket column ends -->
+
+
+<!-- Order SUmmary cols start -->
+
+   <div class="col">
+  <h1>Order Summary</h1>
+
+    <div id="summary-box">
+
+   
+     
+        <input type="text" placeholder="PROMOCODE" id="promocode-input" >
+
+        <div id="apply-promocode-div">
+          <button id="btn">apply promocode</button>
+        </div>
+
+       <div id="num-items-div">
+          <div><span id="num-items-span">4</span><span>x items</span></div>
+          <div id="itemscost"></div>
+       </div>
+
+       <div id="costing-div">
+        <div>Delivery</div>
+        <div id="del-cost">0</div>
+
+       </div>
+
+       <div id="total-cost-parent-div">
+
+          <div> TOTAL</div>
+          <div id="total-cost-div"><span>₹</span><span id="finalcost" ></span></div>
+
+
+       </div>
+
+
+        
+
+
+
+
+
+    </div>
+
+
+
+   </div>
+
+<!-- Order summary cols end -->
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+ product=[
+
+ { name:"HAIR CLEANSER AMLA, HONEY & MULETHI",
+   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/9/7/9734_hair_cleanser_amla_honey_mulethi_200ml_front5.png",
+   price:"1375 ",
+   qty:"1" ,
+ },
+
+ 
+
+ { name:"HAIR CONDITIONER AMLA, HONEY & MULETHI",
+   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/9/7/9737_hair_conditioner_amla_honey_mulethi_200ml_fornt5.png",
+   price:"1475 ",
+   qty:"1" ,
+ },
+
+ { name:"INTENSIVE HAIR REPAIR MASQUE JAPAPATTI & BRAHMI",
+   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/i/n/intensive_hair_repair_masque_japapatti_brahmi_200g.png",
+   price:"1655 ",
+   qty:"1" ,
+ }
+
+]
+
+
+
+let freegift={
+name:"FREE - INTENSE REPAIR HAIR CARE RITUAL WORTH ₹875",
+img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
+price:"0",
+qty:"1",
+
+}
+
+
+
+
+
+var basket_parent=document.getElementById("basket_parent")
+
+
+
+inpt=document.getElementById("promocode-input");
+
+inpt.addEventListener('focus',buttonappear)
+
+btn= document.getElementById("btn")
+function buttonDisappear(){
+    btn.style.display="none";
+
+}
+
+
+function  buttonappear(){
+   
+    btn.style.display="block";
+
+    btn.addEventListener('click',applypromocode)
+
+}
+
+
+
+
+
+function removeitem(prod){
+    var newarr=[];
+    for(i=0;i<product.length;i++){
+        let check=(product[i].name==prod.name);
+        if(check==false){newarr.push(product[i])}
+    }
+  
+    console.log(newarr)
+  
+     basket_parent.innerHTML=null;
+
+     cartshow(newarr)
+  }
+
+
+function plusitem(prod){
+
+    prod.qty=prod.qty+1
+
+
+}
+
+function minusitem(i){
+    prod.qty=prod.qty -1;
+}
+
+
+
+
+   
+
+function cartshow(p){
+
+p.forEach(prod => {
+
+    let row=document.createElement("div");
+   row.setAttribute("class","row1");
+
+   let img_div=document.createElement("div")
+      img_div.setAttribute('id',"img-div")
+    let img=document.createElement("img") 
+        img.src=prod.img 
+       img_div.append(img);
+
+    let name_div= document.createElement("div")
+      
+        name_div.setAttribute('id',"name-div")
+        name_div.textContent=prod.name
+
+     let qty_div=document.createElement('div')   
+         qty_div.setAttribute('id',"qty-div")
+
+      let qty_div_minus=document.createElement('div')  
+      qty_div_minus.setAttribute('id',"qty-div-minus")
+      qty_div_minus.innerHTML="-"
+      qty_div_minus.onclick=function(){
+          minusitem(prod)
+      }
+
+      let qty_div_curr=document.createElement('div')  
+      qty_div_curr.setAttribute('id',"qty-div-curr")
+      qty_div_curr.innerHTML=prod.qty
+      
+
+      let qty_div_plus=document.createElement('div')  
+      qty_div_plus.setAttribute('id',"qty-div-plus")
+      qty_div_plus.innerHTML="+"
+      qty_div_plus.onclick=function(){
+          plusitem(prod)
+      }
+    
+     qty_div.append(qty_div_minus,qty_div_curr,qty_div_plus);
+
+
+     let price_div=document.createElement('div');
+     price_div.setAttribute('id','price-div');
+     let spn1=document.createElement('span')
+     spn1.innerHTML="₹";
+
+     let price_span=document.createElement('span')
+     price_span.setAttribute('id','price-span')
+     price_span.innerHTML=prod.price
+
+     price_div.append(spn1,price_span)
+
+
+     let close_btn_div=document.createElement('div');
+     let close_btn=document.createElement('button');
+     close_btn.setAttribute('id','close-btn')
+     
+     close_btn.setAttribute('class','btn-close')
+
+     close_btn.onclick=function(){
+         removeitem(prod)
+     }
+     
+     close_btn_div.append(close_btn)
+
+     row.append(img_div,name_div,qty_div,price_div,close_btn_div)
+
+     basket_parent.append(row)
+
+    
+});
+ 
+}
+
+
+cartshow(product)
+
+let emptycartnotifier_p=document.getElementById("empty-cart-notice")
+
+emptycartnotifier_p.style.display="none";
+
+function emptycartnotifier(){
+  if(product.length==0){emptycartnotifier_p.style.display="block"}
+
+}
+
+
+
+function totalcost(){
+   let total=0;
+    for(i=0;i<product.length;i++){
+     total=total+ (Number(product[i].qty))*Number((product[i].price));
+
+    }
+
+    return total;
+}
+
+let totalCost=totalcost();
+  
+
+function costshow(totalCost){
+
+    let total_cost=document.getElementById("itemscost")
+         total_cost.innerHTML=totalCost
+      let cart_items=document.getElementById("num-items-span")
+          cart_items.textContent=product.length;
+      
+
+      let final_total=document.getElementById("finalcost")
+      finalcost.textContent=totalCost;
+
+}
+      
+ costshow(totalCost)      
+
+
+
+
+function applypromocode() {
+
+let code =document.getElementById("promocode-input").value
+
+ if(code=="masai30"){let discountedcost=Number(totalCost)-0.3*Number(totalCost)}
+     
+ finalcost=discountedcost;
+
+}          
+
+  </script>  
+    
+</body>
+</html>
