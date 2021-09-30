@@ -5,10 +5,6 @@ var top_nav_text = [
 ]
 
 
-function cart() {
-  console.log("hello");
-}
-
 function top_nav() {
   let nav_text = document.getElementById("top_nav_bar");
   nav_text.textContent = "Customize your cream now! Get started."
@@ -189,6 +185,7 @@ function add_to_cart(p) {
   }
 
   total_quantity();
+  window.location.reload();
 
 }
 
@@ -206,3 +203,73 @@ function total_quantity() {
 
 
 total_quantity();
+
+
+let show_count = 0;
+function show_cart(){
+  if(show_count==0){
+    document.getElementById("cart_container").style.display="block";
+    show_count++;
+  }else if(show_count==1){
+    document.getElementById("cart_container").style.display="none";
+    show_count=0;
+
+  }
+
+}
+
+function close_cart(){
+  console.log("hello");
+  document.getElementById("cart_container").style.display="none";
+}
+
+let cart_items = JSON.parse(localStorage.getItem("f_cart"));
+let cart_show = document.getElementById("cart_show");
+    function create() {
+        let total_div = document.createElement("div");
+        cart_show.append(total_div);
+        let total = 0;
+        cart_items.forEach(function (item) {
+            let container = document.createElement("div");
+
+            container.setAttribute("class", "wrapper");
+
+            let img_div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = item.image;
+
+            img_div.append(img);
+
+            let text_div = document.createElement("div");
+            let name = document.createElement("p");
+
+            name.textContent = item.name;
+
+            let price_quantity = document.createElement("p");
+
+            console.log(item.price);
+
+            let price_num = "";
+
+            for(let i = 0; i<item.price.length; i++){
+                if(item.price[i]!=","){
+                    price_num+= item.price[i];
+                }
+            }
+
+            total = total + parseInt(price_num)*item.qty;
+
+            price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
+            text_div.append(name, price_quantity);
+
+            container.append(img_div, text_div);
+
+            cart_show.append(container);
+        });
+
+        total_div.innerHTML = "CART SUBTOTAL " + " ₹"+total;
+        total_div.style.margin= "10px 0px 0px 10px"
+
+    }
+
+    create();

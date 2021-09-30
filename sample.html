@@ -7,21 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sample</title>
     <style>
-        body {
-            background-color:red;
-        }
-
-        #show {
+       
+        #cart_container{
             background-color: white;
             width: 350px;
             height: 450px;
             float: right;
             margin-top: 50px;
             margin-right: 30px;
+            border: solid 1px black;
+        }
+        #cart_show {
+            background-color: white;
+            width: 350px;
+            height: 450px;
+            float: right;
             overflow-y: scroll;
             font-family: "calibri";
         }
-        #show>span>img{
+        #cart_show>span>img{
             float: right;
             width: 25px;
         }
@@ -45,23 +49,34 @@
         .wrapper>div>img {
             width: 100%;
         }
+       #cart_container>span>button{
+           width: 200px;
+       }
+       #cart_container>span{
+          margin-left: 25%;
+       }
     </style>
 </head>
 
 <body>
-    <div id="show">
-        <span><img src="images\cross-icon.svg" alt=""></span>
-
+    <div id="cart_container">
+        <div id="cart_show">
+            <span><img src="images\cross-icon.svg" alt=""></span>
+        </div>
+        
+        <span><button>GO TO BAGS</button></span>
+       
     </div>
+   
 </body>
 
 </html>
 <script>
     let cart_items = JSON.parse(localStorage.getItem("f_cart"));
-    let show = document.getElementById("show");
+    let cart_show = document.getElementById("cart_show");
     function create() {
         let total_div = document.createElement("div");
-        show.append(total_div);
+        cart_show.append(total_div);
         let total = 0;
         cart_items.forEach(function (item) {
             let container = document.createElement("div");
@@ -98,7 +113,7 @@
 
             container.append(img_div, text_div);
 
-            show.append(container);
+            cart_show.append(container);
         });
 
         total_div.innerHTML = "CART SUBTOTAL " + " ₹"+total;
