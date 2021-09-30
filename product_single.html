@@ -45,21 +45,50 @@ h1{font-size: 40px; line-height: 42px; color: #333333;}
 .ingredient_parent ,.ingredient{display: flex;}
 
 .ingredient_parent{flex-wrap: wrap;}
+.whats_inside{width:400px; padding-right: 20px;
+    font-size:36px;
+    font-weight: 500;
+    line-height: 48px;
 
-.ingredient_parent>div{ margin:25px; width:150px }
+    color: rgb(51, 51, 51)
+
+
+
+}
+
+.ingredient_parent>div{ margin:20px; width:145px; 
+    font-size:14px;
+    font-weight: 400;
+    line-height: 24px;
+    color:rgb(51, 51, 51)
+
+
+}
 .ingredient{margin:auto; padding: 20px 150px}
 
 
 
-.ingredient_img {border-radius: 50%; padding:8px; border:1px solid #333333; width:130px}
+.ingredient_img {border-radius: 50%; padding:10px; border:1px solid #333333; width:100px;height: 100px;}
 .mfg_info{padding:20px 150px 20px 150px}
-.ingredient_img > img{border-radius: 50%; width:120px}
+.ingredient_img > img{border-radius: 50%; width:90px;height: 90px; }
 
 body{font-family: calibre;}
 
    
 
-   .main{margin:auto;}
+ .small_font{
+
+
+    font-size:14px;
+
+   font-weight:400;
+
+   line-height: 24px;
+
+color:rgb(51, 51, 51)
+ }
+
+ 
 
    .before_dash::before{
        content: "-";
@@ -72,13 +101,19 @@ body{font-family: calibre;}
    .main {display: flex; padding:50px 200px; margin:auto} 
    .main >div>img{position: absolute;}
    .main>div:nth-child(2){width:700px; padding: 20px 60px}
+   .main>div:nth-child(1){width:500px; padding: 20px 20px; }
 
-   .main >div{width:500px}
+   .main >div{width:700px}
 
    .row{margin:auto;}
    .center_text{text-align: center;}
 
    .center-item{align-items: center;}
+
+   
+
+   #product_img_box >img{width: inherit;}
+   #wishlist_icon{float:right}
 
 </style>
 
@@ -97,7 +132,7 @@ body{font-family: calibre;}
 <div class="main bg_pink">
 
 <div class="product_img_box">
-    <i class="fa fa-heart" style="color:gray"></i>   
+    <i  id="wishlist_icon" class="fa fa-heart" style="color:gray"></i>   
 
 <img src="https://images.forestessentialsindia.com/pub/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/h/a/hair_care_ritual_for_glossy_hair.png">
 
@@ -109,9 +144,9 @@ body{font-family: calibre;}
 <span>Home</span> <span><i class="fa fa-angle-right"></i></span> <span>HAIR CARE RITUAL FOR GLOSSY HAIR</span>
 </div>  
 
-<h1 class="product_name">Hair Care Ritual For Glossy Hair</h1>
+<h1 class="product_name ">Hair Care Ritual For Glossy Hair</h1>
 
-<p class="product_small_description">Cleanse, replenish and nourish the scalp with our Hair Care Ritual for Glossy Hair, enriched with Amla, Japapatti, Honey & Mulethi. This ritual includes:</p>
+<p class="product_small_description small_font ">Cleanse, replenish and nourish the scalp with our Hair Care Ritual for Glossy Hair, enriched with Amla, Japapatti, Honey & Mulethi. This ritual includes:</p>
 
 
 <h3 class="big_price"><span>₹</span><span>4,500.00</span></h3>
@@ -131,19 +166,20 @@ body{font-family: calibre;}
 
 <button class="primary_btn"> ADD TO BAG</button>
 
-<p>PRODUCT PRICE IS INCL. OF ALL TAXEX</p>
+<p class="small_font">PRODUCT PRICE IS INCL. OF ALL TAXEX</p>
 
-<p><i class="fa fa-truck" style="color: gray;"></i>CHECK DELIVERY</p>
-
-
-<p>DESCRIPTION</p>
-
-<p class="product_long_description">For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.</p>
+<p class="small_font"><i class="fa fa-truck" style="color: gray;"></i>CHECK DELIVERY</p>
 
 
-<p>BENEFITS</p>
+<p class="product_long_description small_font">DESCRIPTION</p>
 
-<ol>
+<p class="product_long_description small_font">For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.</p>
+
+
+
+<p class="small_font">BENEFITS</p>
+
+<ol class="small_font">
 <li>Helps to repair chemically treated hair and leave it lush and lustrous.</li>
 <li>Detangles hair and reduces frizz</li>
 <li>Free from Sulphates, Parabens, and Petrochemicals</li>
@@ -164,7 +200,7 @@ body{font-family: calibre;}
 <div class="ingredient">
  
 
-    <div> <h1>What's  inside that really matters</h1></div>
+    <div class="whats_inside"> <h1>What's  inside that really matters</h1></div>
 
 
     <div class="ingredient_parent" >
@@ -251,9 +287,9 @@ body{font-family: calibre;}
 
 
 <div class=" row bg_pink para_info">
-<p>HOW TO USE</p>
+<p class="small_font">HOW TO USE</p>
 
-<ol>
+<ol class="small_font">
 <li>Use the Japapatti & Brahmi Intensive Hair Repair Masque as a pre-shampoo treatment along the length of the hair. Keep it on for 30 minutes and wrap a hot towel around the head for it to be absorbed by the roots.</li>
 <li>Wash the mask off with the Amla, Honey & Mulethi cleanser. Rinse well and use again if required</li>
 <li>Then, take a pea-sized amount of the Amla, Honey & Mulethi Conditoner and apply it along the length of the your hair. Rinse well with water, till it runs clear.</li>
@@ -266,7 +302,7 @@ body{font-family: calibre;}
 
 
 
-<div class="row">
+<div class="row small_font">
 <p>Complete your routine</p>
 
 <p>This is left for products</p>
@@ -277,7 +313,7 @@ body{font-family: calibre;}
 
        
 
-<div class="para_info ">
+<div class="para_info small_font ">
 <p>MANUFACTURING INFORMATION</p>
 
 <div>All our products are manufactured & marketed by Mountain Valley Springs (I)  Pvt. Ltd.E-46 & 47, I. A., Bahadrabad, Haridwar, Uttarakhand – 249402, INDIA
