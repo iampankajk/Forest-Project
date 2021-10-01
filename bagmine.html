@@ -344,7 +344,7 @@ function totalcost(){
 
 let totalCost=totalcost();
   
-console.log(totalCost)
+
 let cart_items=document.getElementById("num-items-span")
           cart_items.textContent=cartprod.length;
 
@@ -385,15 +385,21 @@ let code =document.getElementById("promocode-input").value
 function singleprod(product){
 
  
+ 
  localStorage.setItem('s_p',JSON.stringify(product))
 
+ let p= JSON.parse(localStorage.getItem('s_p')) 
 
-  let p= JSON.parse(localStorage.getItem('s_p')) 
+  console.log(p)
   
   window.location.href="product_single.html"
 }
 
 
+
+  let p= JSON.parse(localStorage.getItem('s_p')) 
+
+  console.log(p)
 
 
   </script>  

@@ -340,14 +340,19 @@ localStorage.setItem('subscription_user',JSON.stringify(arr));
 
 
 
- let prod=JSON.parse(localStorage.getItem('s_p'))
+ let pr=JSON.parse(localStorage.getItem('s_p'))
 
-  document.getElementById("prod_name").innerHTML=prod.name;
+  document.getElementById("prod_name").innerHTML=pr.name;
 
-  document.getElementById("prod_price_span").innerHTML=prod.price;
-  document.getElementById("prod_img").src=prod.image
-  document.getElementById("prod_small_des").innerHTML=prod.description
-  console.log(prod.image)
+  document.getElementById("prod_price_span").innerHTML=pr.price;
+  let ig=document.getElementById("prod_img")
+  
+  console.log(ig)
+
+  document.getElementById("prod_small_des").innerHTML=pr.description
+
+
+ 
 
 
   
