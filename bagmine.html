@@ -308,7 +308,13 @@ p.forEach(prod => {
 }
 
 
-cartshow(product)
+
+cartprod=JSON.parse(localStorage.getItem('f_cart'))
+console.log(cartprod)
+cartshow(cartprod)
+
+
+
 
 let emptycartnotifier_p=document.getElementById("empty-cart-notice")
 
@@ -366,9 +372,14 @@ let code =document.getElementById("promocode-input").value
  costshow(discountedcost)
 
 
-}          
+}     
+
+
+
 
   </script>  
+
+  <script src="bagscript.js"></script>
     
 </body>
 </html>
