@@ -96,11 +96,10 @@ body{font-family: calibre;}
 
 <div class="main bg_pink">
 
-<div class="product_img_box">
+<div class="product_img_box" id="img_box_main">
     <i class="fa fa-heart" style="color:gray"></i>   
 
-<img id="prod_img " src="https://images.forestessentialsindia.com/pub/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/h/a/hair_care_ritual_for_glossy_hair.png">
-
+   <img id="main_img">
 </div>
 
 <div class="product_parent_des_box">
@@ -338,18 +337,21 @@ localStorage.setItem('subscription_user',JSON.stringify(arr));
 
 
 
+let p= JSON.parse(localStorage.getItem('s_p')) 
 
 
- let pr=JSON.parse(localStorage.getItem('s_p'))
 
-  document.getElementById("prod_name").innerHTML=pr.name;
 
-  document.getElementById("prod_price_span").innerHTML=pr.price;
-  let ig=document.getElementById("prod_img")
-  
-  console.log(ig)
+  document.getElementById("prod_name").innerHTML=p.name;
 
-  document.getElementById("prod_small_des").innerHTML=pr.description
+  document.getElementById("prod_price_span").innerHTML=p.price;
+
+  let img=document.getElementById("main_img");
+ 
+      img.src=p.image
+      
+
+  document.getElementById("prod_small_des").innerHTML=p.description
 
 
  

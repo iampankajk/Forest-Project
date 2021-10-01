@@ -11,6 +11,8 @@
 
      .row1 >div >div{cursor: pointer;}
 
+    #main_prod_img{cursor: pointer;}
+
      div{border: 1px solid red}
      
   .summary-box>div{display:flex}
@@ -19,6 +21,8 @@
 body{font-size: 12px;}
 .row1{display:flex}
 #qty-div{display:flex}
+
+
 
 #btn{display:none}
 
@@ -135,35 +139,13 @@ body{font-size: 12px;}
 
   <script>
 
- product=[
-
- { name:"HAIR CLEANSER AMLA, HONEY & MULETHI",
-   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/9/7/9734_hair_cleanser_amla_honey_mulethi_200ml_front5.png",
-   price:"1375 ",
-   qty:"1" ,
- },
-
  
-
- { name:"HAIR CONDITIONER AMLA, HONEY & MULETHI",
-   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/9/7/9737_hair_conditioner_amla_honey_mulethi_200ml_fornt5.png",
-   price:"1475 ",
-   qty:"1" ,
- },
-
- { name:"INTENSIVE HAIR REPAIR MASQUE JAPAPATTI & BRAHMI",
-   img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/i/n/intensive_hair_repair_masque_japapatti_brahmi_200g.png",
-   price:"1655 ",
-   qty:"1" ,
- }
-
-]
 
 
 
 let freegift={
 name:"FREE - INTENSE REPAIR HAIR CARE RITUAL WORTH ₹875",
-img:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
+image:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
 price:"0",
 qty:"1",
 
@@ -240,14 +222,16 @@ p.forEach(prod => {
 
    let img_div=document.createElement("div")
       img_div.setAttribute('id',"img-div")
-      img_div.onclick=function(){
-        singleprod(prod)
-      }
+      
 
 
     let img=document.createElement("img") 
         img.src=prod.image; 
+        img.setAttribute('id','main_prod_img')
        img_div.append(img);
+       img.onclick=function(){
+        singleprod(prod)
+      }
 
     let name_div= document.createElement("div")
       
@@ -388,19 +372,14 @@ function singleprod(product){
  
  localStorage.setItem('s_p',JSON.stringify(product))
 
- let p= JSON.parse(localStorage.getItem('s_p')) 
-
-  console.log(p)
+ 
   
   window.location.href="product_single.html"
 }
 
 
 
-  let p= JSON.parse(localStorage.getItem('s_p')) 
-
-  console.log(p)
-
+  
 
   </script>  
 
