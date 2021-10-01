@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample</title>
+    <style>
+       
+        #cart_container{
+            background-color: white;
+            width: 350px;
+            height: 450px;
+            float: right;
+            margin-top: 50px;
+            margin-right: 30px;
+            border: solid 1px black;
+        }
+        #cart_show {
+            background-color: white;
+            width: 350px;
+            height: 450px;
+            float: right;
+            overflow-y: scroll;
+            font-family: "calibri";
+        }
+        #cart_show>span>img{
+            float: right;
+            width: 25px;
+        }
+        .wrapper {
+            display: grid;
+            width: 320px;
+            margin: auto;
+            grid-template-columns: 100px 200px;
+            grid-gap: 20px;
+
+
+        }
+
+        .wrapper::after {
+            content: " ";
+            height: 1px;
+            background-color: black;
+            width: 320px;
+        }
+
+        .wrapper>div>img {
+            width: 100%;
+        }
+       #cart_container>span>button{
+           width: 200px;
+       }
+       #cart_container>span{
+          margin-left: 25%;
+       }
+    </style>
+</head>
+
+<body>
+    <div id="cart_container">
+        <div id="cart_show">
+            <span><img src="images\cross-icon.svg" alt=""></span>
+        </div>
+        
+        <span><button>GO TO BAGS</button></span>
+       
+    </div>
+   
+</body>
+
+</html>
+<script>
+    let cart_items = JSON.parse(localStorage.getItem("f_cart"));
+    let cart_show = document.getElementById("cart_show");
+    function create() {
+        let total_div = document.createElement("div");
+        cart_show.append(total_div);
+        let total = 0;
+        cart_items.forEach(function (item) {
+            let container = document.createElement("div");
+
+            container.setAttribute("class", "wrapper");
+
+            let img_div = document.createElement("div");
+            let img = document.createElement("img");
+            img.src = item.image;
+
+            img_div.append(img);
+
+            let text_div = document.createElement("div");
+            let name = document.createElement("p");
+
+            name.textContent = item.name;
+
+            let price_quantity = document.createElement("p");
+
+            console.log(item.price);
+
+            let price_num = "";
+
+            for(let i = 0; i<item.price.length; i++){
+                if(item.price[i]!=","){
+                    price_num+= item.price[i];
+                }
+            }
+
+            total = total + parseInt(price_num);
+
+            price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
+            text_div.append(name, price_quantity);
+
+            container.append(img_div, text_div);
+
+            cart_show.append(container);
+        });
+
+        total_div.innerHTML = "CART SUBTOTAL " + " ₹"+total;
+        total_div.style.margin= "10px 0px 0px 10px"
+
+    }
+
+    create();
+</script>
