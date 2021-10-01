@@ -99,7 +99,7 @@ body{font-family: calibre;}
 <div class="product_img_box">
     <i class="fa fa-heart" style="color:gray"></i>   
 
-<img src="https://images.forestessentialsindia.com/pub/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/h/a/hair_care_ritual_for_glossy_hair.png">
+<img id="prod_img " src="https://images.forestessentialsindia.com/pub/media/catalog/product/cache/9bb9d677791f8666003e194c8a94aeff/h/a/hair_care_ritual_for_glossy_hair.png">
 
 </div>
 
@@ -109,12 +109,12 @@ body{font-family: calibre;}
 <span>Home</span> <span><i class="fa fa-angle-right"></i></span> <span>HAIR CARE RITUAL FOR GLOSSY HAIR</span>
 </div>  
 
-<h1 class="product_name">Hair Care Ritual For Glossy Hair</h1>
+<h1 class="product_name" id="prod_name">Hair Care Ritual For Glossy Hair</h1>
 
 <p class="product_small_description">Cleanse, replenish and nourish the scalp with our Hair Care Ritual for Glossy Hair, enriched with Amla, Japapatti, Honey & Mulethi. This ritual includes:</p>
 
 
-<h3 class="big_price"><span>₹</span><span>4,500.00</span></h3>
+<h3 class="big_price"><span>₹</span><span id="prod_price_span">4,500.00</span></h3>
 
 <div class="item_in_product">
 <ul>
@@ -342,7 +342,14 @@ localStorage.setItem('subscription_user',JSON.stringify(arr));
 
  let prod=JSON.parse(localStorage.getItem('s_p'))
 
+  doucment.getElementById("prod_name").innerHTML=prod.name;
+
+  document.getElementById("prod_price_span").innerHTML=prod.price;
+
   console.log(prod)
+
+
+
 
     
 </script>
