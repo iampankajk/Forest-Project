@@ -334,12 +334,15 @@ function totalcost(){
 let totalCost=totalcost();
   
 
+let cart_items=document.getElementById("num-items-span")
+          cart_items.textContent=product.length;
+
+
 function costshow(totalCost){
 
     let total_cost=document.getElementById("itemscost")
          total_cost.innerHTML=totalCost
-      let cart_items=document.getElementById("num-items-span")
-          cart_items.textContent=product.length;
+      
       
 
       let final_total=document.getElementById("finalcost")
@@ -347,7 +350,7 @@ function costshow(totalCost){
 
 }
       
- costshow(totalCost)      
+costshow(totalCost)      
 
 
 
@@ -356,9 +359,12 @@ function applypromocode() {
 
 let code =document.getElementById("promocode-input").value
 
- if(code=="masai30"){let discountedcost=Number(totalCost)-0.3*Number(totalCost)}
+ if(code=="masai30"){var discountedcost=Number(totalCost)-0.3*Number(totalCost)}
      
- finalcost=discountedcost;
+ 
+
+ costshow(discountedcost)
+
 
 }          
 
