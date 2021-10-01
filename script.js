@@ -70,10 +70,10 @@ dots.forEach((dot, i) => {
 
 
 
-let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png", "qty": 1,"description":"The secret to proper cleansing is to remove dead cells, toxins and make up, and clear clogged pores, without stripping the skin’s natural oil and moisture content. Following this philosophy, the Forest Essentials Delicate Facial Cleanser Kashmiri Saffron & Neem is an ideal gentle and natural alternative to harsh sulphate infused cleansers, and is especially designed to treat sensitive, acne prone and oily skin. This Ayurvedic facial cleanser is infused with purifying herbs including Neem and Kewda to deeply cleanse the skin, while leaving it glowing and balanced after each use." ,"category":"facial care"},
-{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png", "qty": 1, "description":"Ayurveda speaks of flawless skin as lustrous, smooth, firm and elastic, with a golden sheen. The Forest Essentials Soundarya Radiance Cream With 24K Gold & SPF25 is an exceptionally rich yet light textured face cream that incorporates a combination of precious herbs and real 24 Karat Gold, which helps to restore the firmness of the skin, giving it a natural facelift. This face moisturizer comes with SPF 25 that helps neutralize UVA and UVB radiation and protects the skin from sun damage, environmental stressors and pollution. The Soundarya Cream has been awarded as the 'Best Moisturizer' by Elle India and as the 'Best Anti-Aging Cream' by Asia Spa." ,"category":"body care"},
-{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png", "qty": 1, "description": "The Forest Essentials Hand Pounded Organic Fruit Scrub is a nourishing face exfoliator, hand-pounded to the right consistency and blended with fresh organically grown Dates and Peaches, which are excellent antioxidants and improve the skin's elasticity. It is infused with Apricot Kernel oil which nourishes, softens and restores collagen production in the skin. This Ayurvedic face exfoliator also contains pure raw Honey, a natural antioxidant that protects the skin from sun damage, replenishes the skin's moisture, and absorbs impurities from the pores, making it an ideal exfoliating face scrub.","category":"makeup"},
-{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png", "qty": 1, "description": "For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.","category":"hair care"},
+let best_seller_product = [{ "name": "Delicate Facial Cleanser Kashmiri Saffron & Neem", "tag": "BESTSELLER", "size": "200 ml", "review": "4.7/5 (140 REVIEWS)", "price": "1,395.00", "image": "images/8878_delicate_facial_cleanser_kashmiri_saffron_neem_200ml_fornt1.png", "qty": 1, "description": "The secret to proper cleansing is to remove dead cells, toxins and make up, and clear clogged pores, without stripping the skin’s natural oil and moisture content. Following this philosophy, the Forest Essentials Delicate Facial Cleanser Kashmiri Saffron & Neem is an ideal gentle and natural alternative to harsh sulphate infused cleansers, and is especially designed to treat sensitive, acne prone and oily skin. This Ayurvedic facial cleanser is infused with purifying herbs including Neem and Kewda to deeply cleanse the skin, while leaving it glowing and balanced after each use.", "category": "facial care" },
+{ "name": "Soundarya Radiance Cream With 24K Gold & SPF25", "tag": "BESTSELLER", "size": "50 g", "review": "4.7/5 (119 REVIEWS)", "price": "5,400.00", "image": "images/8842_soundarya_radiance_cream_50g_front.png", "qty": 1, "description": "Ayurveda speaks of flawless skin as lustrous, smooth, firm and elastic, with a golden sheen. The Forest Essentials Soundarya Radiance Cream With 24K Gold & SPF25 is an exceptionally rich yet light textured face cream that incorporates a combination of precious herbs and real 24 Karat Gold, which helps to restore the firmness of the skin, giving it a natural facelift. This face moisturizer comes with SPF 25 that helps neutralize UVA and UVB radiation and protects the skin from sun damage, environmental stressors and pollution. The Soundarya Cream has been awarded as the 'Best Moisturizer' by Elle India and as the 'Best Anti-Aging Cream' by Asia Spa.", "category": "body care" },
+{ "name": "Hand Pounded Organic Fruit Scrub", "tag": "BESTSELLER", "size": "50 g", "review": "4.8/5 (29 REVIEWS)", "price": "1,950.00", "image": "images/8854_facial_scrub_hand_pounded_fruit_scrub_50g_front.png", "qty": 1, "description": "The Forest Essentials Hand Pounded Organic Fruit Scrub is a nourishing face exfoliator, hand-pounded to the right consistency and blended with fresh organically grown Dates and Peaches, which are excellent antioxidants and improve the skin's elasticity. It is infused with Apricot Kernel oil which nourishes, softens and restores collagen production in the skin. This Ayurvedic face exfoliator also contains pure raw Honey, a natural antioxidant that protects the skin from sun damage, replenishes the skin's moisture, and absorbs impurities from the pores, making it an ideal exfoliating face scrub.", "category": "makeup" },
+{ "name": "Hair Care Ritual For Glossy Hair", "tag": "BESTSELLER", "size": "600 g", "review": "4.8/5 (129 REVIEWS)", "price": "4,500.00", "image": "images/hair_care_ritual_for_glossy_hair.png", "qty": 1, "description": "For a natural swing and voluminous hair with a lustrous sheen, use our Hair Care Ritual for Glossy Hair at least twice a week. Enriched with fresh Amla, sweet raw Honey, Brahmi, Mulethi and Japapatti, this ritual cleanses the scalp and nourishes the hair.", "category": "hair care" },
 ];
 
 let gifts_section = [
@@ -133,7 +133,7 @@ function show_gifts() {
 
     let name = document.createElement("p");
     name.textContent = gifts.name;
-    
+
     let tag = document.createElement("p");
     tag.textContent = gifts.tag;
 
@@ -206,100 +206,100 @@ total_quantity();
 
 
 let show_count = 0;
-function show_cart(){
-  if(show_count==0){
-    document.getElementById("cart_container").style.display="block";
+function show_cart() {
+  if (show_count == 0) {
+    document.getElementById("cart_container").style.display = "block";
     show_count++;
-  }else if(show_count==1){
-    document.getElementById("cart_container").style.display="none";
-    show_count=0;
+  } else if (show_count == 1) {
+    document.getElementById("cart_container").style.display = "none";
+    show_count = 0;
 
   }
 
 }
 
-function close_cart(){
-  document.getElementById("cart_container").style.display="none";
+function close_cart() {
+  document.getElementById("cart_container").style.display = "none";
 }
 
 let cart_items = JSON.parse(localStorage.getItem("f_cart"));
 let cart_show = document.getElementById("cart_show");
-    function create() {
-        let total_div = document.createElement("div");
-        cart_show.append(total_div);
-        let total = 0;
-        cart_items.forEach(function (item) {
-            let container = document.createElement("div");
+function create() {
+  let total_div = document.createElement("div");
+  cart_show.append(total_div);
+  let total = 0;
+  cart_items.forEach(function (item) {
+    let container = document.createElement("div");
 
-            container.setAttribute("class", "wrapper");
+    container.setAttribute("class", "wrapper");
 
-            let img_div = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = item.image;
+    let img_div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = item.image;
 
-            img_div.append(img);
+    img_div.append(img);
 
-            let text_div = document.createElement("div");
-            let name = document.createElement("p");
+    let text_div = document.createElement("div");
+    let name = document.createElement("p");
 
-            name.textContent = item.name;
+    name.textContent = item.name;
 
-            let price_quantity = document.createElement("p");
+    let price_quantity = document.createElement("p");
 
-            console.log(item.price);
+    console.log(item.price);
 
-            let price_num = "";
+    let price_num = "";
 
-            for(let i = 0; i<item.price.length; i++){
-                if(item.price[i]!=","){
-                    price_num+= item.price[i];
-                }
-            }
-
-            total = total + parseInt(price_num)*item.qty;
-
-            price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
-            text_div.append(name, price_quantity);
-
-            container.append(img_div, text_div);
-
-            cart_show.append(container);
-        });
-
-        total_div.innerHTML = "CART SUBTOTAL " + " ₹"+total;
-        total_div.style.margin= "10px 0px 0px 10px"
-
+    for (let i = 0; i < item.price.length; i++) {
+      if (item.price[i] != ",") {
+        price_num += item.price[i];
+      }
     }
 
-    create();
+    total = total + parseInt(price_num) * item.qty;
 
-   
-    // Catogery Carousel
+    price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
+    text_div.append(name, price_quantity);
 
-    const nextIcon = '<img src="./right-arrow.svg" alt="right">';
-    const prevIcon = '<img src="./left-arrow.svg" alt="left" >';
-    
-    $('.owl-carousel').owlCarousel({
-      loop:true,
-      autoplay: true,
-      margin:10,
-      nav: true,
-      navText: [
-      prevIcon,
-      nextIcon
-    ],
-      responsive:{
-          0:{
-              items:1
-          },
-          600:{
-              items:3
-          },
-          1000:{
-              items:5
-          }
-      }
-    })
+    container.append(img_div, text_div);
+
+    cart_show.append(container);
+  });
+
+  total_div.innerHTML = "CART SUBTOTAL " + " ₹" + total;
+  total_div.style.margin = "10px 0px 0px 10px"
+
+}
+
+create();
+
+
+// Catogery Carousel
+
+const nextIcon = '<img src="./right-arrow.svg" alt="right">';
+const prevIcon = '<img src="./left-arrow.svg" alt="left" >';
+
+$('.owl-carousel').owlCarousel({
+  loop: true,
+  autoplay: true,
+  margin: 10,
+  nav: true,
+  navText: [
+    prevIcon,
+    nextIcon
+  ],
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 3
+    },
+    1000: {
+      items: 5
+    }
+  }
+})
 
 
 
@@ -307,94 +307,94 @@ let cart_show = document.getElementById("cart_show");
 let testimonial = [
 
   {
-      content: "superb csfrfrfream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMIjk",
-      date: "Kanpur,2021"
+    content: "superb csfrfrfream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMIjk",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awe;tktmhtpghp[esome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHgfgMI",
-      date: "Kanpur,2021"
+    content: "superb cream awe;tktmhtpghp[esome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHgfgMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome le/syet e;tlcream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSdtHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome le/syet e;tlcream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSdtHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesomerlegkjekge cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSthdtHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesomerlegkjekge cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSthdtHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome creagltg;etgoem,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSdtHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome creagltg;etgoem,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSdtHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,tlhrktmrltkeepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKdddSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,tlhrktmrltkeepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKdddSHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKfhtSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKfhtSHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,keepes hydrated lrjgelrkI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated lrjgelrkI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,keepes hydrated telmtlmeI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated telmtlmeI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,keepes hydrated I tlyetlykelove it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I tlyetlykelove it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI",
+    date: "Kanpur,2021"
   },
 
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.A gemetjeltk fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI5",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.A gemetjeltk fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI5",
+    date: "Kanpur,2021"
   },
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.Atlgjelrt gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI6",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.Atlgjelrt gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI6",
+    date: "Kanpur,2021"
   },
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.ktjkgjtgeA gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.ktjkgjtgeA gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI",
+    date: "Kanpur,2021"
   },
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI1",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI1",
+    date: "Kanpur,2021"
   },
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI2",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI2",
+    date: "Kanpur,2021"
   },
   {
-      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
-      name: "LAKSHMI4",
-      date: "Kanpur,2021"
+    content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+    name: "LAKSHMI4",
+    date: "Kanpur,2021"
   }
 ]
 
@@ -408,6 +408,45 @@ var count_t = 0;
 function show_testimonial() {
 
   for (i = count_t; i < count_t + 4; i++) {
+
+    div = document.createElement("div")
+    div.setAttribute('class', "testimonial_div");
+
+    span = document.createElement("span")
+    icon = document.createElement("i");
+    icon.setAttribute('class', "fa fa-quote-left")
+    icon.setAttribute('style', "color: gray;")
+    span.append(icon)
+
+
+    div2 = document.createElement("div");
+    div2.setAttribute('class', "testimonial_content");
+    div2.textContent = testimonial[i].content
+
+    div3 = document.createElement("div");
+    div3.setAttribute('class', "dash");
+
+    div5 = document.createElement("div");
+    div5.setAttribute('class', "testimonial_name");
+    div5.textContent = testimonial[i].name
+
+    div6 = document.createElement("div");
+    div6.setAttribute('class', "testimonial_date");
+    div6.textContent = testimonial[i].date
+
+    div.append(span, div2, div3, div5, div6);
+    testimonial_parent.append(div);
+
+  }
+
+
+
+  setInterval(() => {
+
+
+    if (count_t == testimonial.length - 4) { count_t = 0 }
+    testimonial_parent.innerHTML = null;
+    for (i = count_t; i < count_t + 4; i++) {
 
       div = document.createElement("div")
       div.setAttribute('class', "testimonial_div");
@@ -437,48 +476,9 @@ function show_testimonial() {
       div.append(span, div2, div3, div5, div6);
       testimonial_parent.append(div);
 
-  }
+    }
 
-
-
-  setInterval(() => {
-
-
-      if (count_t == testimonial.length - 4) { count_t = 0 }
-      testimonial_parent.innerHTML = null;
-      for (i = count_t; i < count_t + 4; i++) {
-
-          div = document.createElement("div")
-          div.setAttribute('class', "testimonial_div");
-
-          span = document.createElement("span")
-          icon = document.createElement("i");
-          icon.setAttribute('class', "fa fa-quote-left")
-          icon.setAttribute('style', "color: gray;")
-          span.append(icon)
-
-
-          div2 = document.createElement("div");
-          div2.setAttribute('class', "testimonial_content");
-          div2.textContent = testimonial[i].content
-
-          div3 = document.createElement("div");
-          div3.setAttribute('class', "dash");
-
-          div5 = document.createElement("div");
-          div5.setAttribute('class', "testimonial_name");
-          div5.textContent = testimonial[i].name
-
-          div6 = document.createElement("div");
-          div6.setAttribute('class', "testimonial_date");
-          div6.textContent = testimonial[i].date
-
-          div.append(span, div2, div3, div5, div6);
-          testimonial_parent.append(div);
-
-      }
-
-      count_t = count_t + 4;
+    count_t = count_t + 4;
   }, 1000);
 
 
