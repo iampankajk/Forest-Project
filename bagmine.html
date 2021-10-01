@@ -7,23 +7,50 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <style>
-     .main{margin:auto; display: flex; padding:20px 120px}
+      #basket_item_body{margin-right: 60px;}
+     #main_prod_img{width:180px; padding:10px}
+     .main{margin:auto; display:flex; padding:20px 160px;}
+     .main > div >.row1{width:100px}
+     .col >h1{font-size: 27px;
+              font-weight:350;
+              color:rgb(68, 67, 67);
+              line-height: 48px;
+            padding-top: 40px;
+          padding-bottom: 20px;}
 
+
+      .row1{width:700px; border-top: 1px solid rgb(202, 202, 202);}
+      .row1 >div{margin:10px;text-align: center;vertical-align: middle;}
+      .row1>div:nth-child(5){width:30px}
+      .row1>div:nth-child(2){padding:70px 10px; text-align: center;}
+      .row1>div:nth-child(3){padding:60px 30px}
+      .row1>div:nth-child(3) >div{width:40px;height: 40px; padding:2px; border:1px solid rgb(202, 202, 202)}
+      .row1>div:nth-child(4){ padding:70px 10px}
+      .row1>div:nth-child(5){ padding:70px 20px}
+
+      #summary-box{border-top:  1px solid rgb(202, 202, 202); padding-top: 20px;}
      .row1 >div >div{cursor: pointer;}
+
+     #summary-box>div{height:60px;display: flex;}
+     #summary-box>div >div{width: 300px;}
+     #summary-box>div >div:nth-child(2){text-align: right; margin-right: 10px}
 
     #main_prod_img{cursor: pointer;}
 
-     div{border: 1px solid red}
-     
-  .summary-box>div{display:flex}
-  .summary-box>div>div{margin:auto}
+     #order_sum_body{width:270px;padding:20px}
        
-body{font-size: 12px;}
+body{font-size: 12px;
+ color:rgb(51,51,51);
+
+}
 .row1{display:flex}
 #qty-div{display:flex}
 
 
+#order_sum_body> div >input{padding:15px 250px 15px 6px;border: 1px solid rgb(168, 165, 165);}
 
+#order_sum_body> div >div >button{padding:15px 180px ; border:2px solid rgb(75, 74, 74) ; text-align:center ;background-color: white;}
+#order_sum_body> div >div:nth-child(5){ border-top: 1px solid rgb(192, 188, 188); padding-top:20px}
 #btn{display:none}
 
     </style>
@@ -55,17 +82,17 @@ body{font-size: 12px;}
 
 <!-- Order SUmmary cols start -->
 
-   <div class="col">
+   <div class="col" id="order_sum_body">
   <h1>Order Summary</h1>
-
+  
     <div id="summary-box">
-
-   
+      <p>PROMOCODE</p>
+        
      
         <input type="text" placeholder="PROMOCODE" id="promocode-input" >
 
         <div id="apply-promocode-div">
-          <button id="btn">apply promocode</button>
+          <button id="btn">Apply </button>
         </div>
 
        <div id="num-items-div">
@@ -183,25 +210,21 @@ function  buttonappear(){
 cartprod=JSON.parse(localStorage.getItem('f_cart'))
 
 function removeitem(prod){
-    var newarr=[];
-    for(i=0;i<cartprod.length;i++){
-        let check=(cartprod[i].name==prod.name);
-        if(check==false){newarr.push(cartprod[i])}
-    }
-  
-    console.log(newarr)
-    localStorage.setItem('f_cart',JSON.stringify(newarr))
-     basket_parent.innerHTML=null;
-     
-     chngedarr=JSON.parse(localStorage.getItem('f_cart'))
-   
-     cartshow(chngedarr)
+
+  item=JSON.parse(localStorage.getItem('f_cart'))
+    
+  for(i=0;i<item.length;i++){
+    if(item[i].name==prod.name){item.splice(i,1)}
   }
 
 
+  localStorage.setItem('f_cart',JSON.stringify(item))
+  basket_parent.innerHTML=null;
+  cartshow(item)
 
+  }
 
-
+  
 
 
 
@@ -315,20 +338,22 @@ cartshow(cartprod)
 
 let emptycartnotifier_p=document.getElementById("empty-cart-notice")
 
-emptycartnotifier_p.style.display="none";
+if(cartprod.length==0){
+emptycartnotifier_p.style.display="block";}
 
-function emptycartnotifier(){
-  if(cartprod.length==0){emptycartnotifier_p.style.display="block"}
+else{emptycartnotifier_p.style.display="none"}
 
-}
+
 
 
 
 function totalcost(){
    let total=0;
     for(i=0;i<cartprod.length;i++){
-     rs=cartprod[i].qty*cartprod[i].price;
-      total=total+rs
+      q=Number(cartprod[i].qty)
+      p=parseFloat(cartprod[i].price) +parseInt(cartprod[i].price)
+    
+      total=total+(q*p)
     }
 
     return total;
@@ -338,7 +363,7 @@ let totalCost=totalcost();
   
 
 let cart_items=document.getElementById("num-items-span")
-          cart_items.textContent=cartprod.length;
+          cart_items.textContent=cartprod.length; 
 
 
 function costshow(totalCost){
