@@ -384,8 +384,12 @@ let code =document.getElementById("promocode-input").value
 
 function singleprod(product){
 
-console.log(product)
+ 
+ localStorage.setItem('s_p',JSON.stringify(product))
 
+
+  let p= JSON.parse(localStorage.getItem('s_p')) 
+  
 
 }
 
