@@ -300,3 +300,190 @@ let cart_show = document.getElementById("cart_show");
           }
       }
     })
+
+
+
+// testimonial start
+let testimonial = [
+
+  {
+      content: "superb csfrfrfream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMIjk",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awe;tktmhtpghp[esome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHgfgMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome le/syet e;tlcream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSdtHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesomerlegkjekge cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSthdtHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome creagltg;etgoem,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSdtHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,tlhrktmrltkeepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKdddSHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKfhtSHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,keepes hydrated lrjgelrkI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,keepes hydrated telmtlmeI love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,keepes hydrated I tlyetlykelove it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI",
+      date: "Kanpur,2021"
+  },
+
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.A gemetjeltk fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI5",
+      date: "Kanpur,2021"
+  },
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.Atlgjelrt gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI6",
+      date: "Kanpur,2021"
+  },
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.ktjkgjtgeA gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI",
+      date: "Kanpur,2021"
+  },
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI1",
+      date: "Kanpur,2021"
+  },
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI2",
+      date: "Kanpur,2021"
+  },
+  {
+      content: "superb cream awesome cream,keepes hydrated I love it.A gem fibre my sunspot si visible, a horible cream.it worth ech panny",
+      name: "LAKSHMI4",
+      date: "Kanpur,2021"
+  }
+]
+
+
+
+
+
+testimonial_parent = document.getElementById("testimonial_parent")
+var count_t = 0;
+
+function show_testimonial() {
+
+  for (i = count_t; i < count_t + 4; i++) {
+
+      div = document.createElement("div")
+      div.setAttribute('class', "testimonial_div");
+
+      span = document.createElement("span")
+      icon = document.createElement("i");
+      icon.setAttribute('class', "fa fa-quote-left")
+      icon.setAttribute('style', "color: gray;")
+      span.append(icon)
+
+
+      div2 = document.createElement("div");
+      div2.setAttribute('class', "testimonial_content");
+      div2.textContent = testimonial[i].content
+
+      div3 = document.createElement("div");
+      div3.setAttribute('class', "dash");
+
+      div5 = document.createElement("div");
+      div5.setAttribute('class', "testimonial_name");
+      div5.textContent = testimonial[i].name
+
+      div6 = document.createElement("div");
+      div6.setAttribute('class', "testimonial_date");
+      div6.textContent = testimonial[i].date
+
+      div.append(span, div2, div3, div5, div6);
+      testimonial_parent.append(div);
+
+  }
+
+
+
+  setInterval(() => {
+
+
+      if (count_t == testimonial.length - 4) { count_t = 0 }
+      testimonial_parent.innerHTML = null;
+      for (i = count_t; i < count_t + 4; i++) {
+
+          div = document.createElement("div")
+          div.setAttribute('class', "testimonial_div");
+
+          span = document.createElement("span")
+          icon = document.createElement("i");
+          icon.setAttribute('class', "fa fa-quote-left")
+          icon.setAttribute('style', "color: gray;")
+          span.append(icon)
+
+
+          div2 = document.createElement("div");
+          div2.setAttribute('class', "testimonial_content");
+          div2.textContent = testimonial[i].content
+
+          div3 = document.createElement("div");
+          div3.setAttribute('class', "dash");
+
+          div5 = document.createElement("div");
+          div5.setAttribute('class', "testimonial_name");
+          div5.textContent = testimonial[i].name
+
+          div6 = document.createElement("div");
+          div6.setAttribute('class', "testimonial_date");
+          div6.textContent = testimonial[i].date
+
+          div.append(span, div2, div3, div5, div6);
+          testimonial_parent.append(div);
+
+      }
+
+      count_t = count_t + 4;
+  }, 1000);
+
+
+}
+show_testimonial()
+
+
+// testimonial ends
