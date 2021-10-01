@@ -330,9 +330,10 @@ function create() {
   });
 
   total_div.innerHTML = "CART SUBTOTAL " + " ₹" + total;
-
-  if (cart_items[1].currency == "$") {
-    total_div.innerHTML = "CART SUBTOTAL " + " $" + total;
+  if(cart_items.length>0){
+    if (cart_items[0].currency == "$") {
+      total_div.innerHTML = "CART SUBTOTAL " + " $" + total;
+    }
   }
   total_div.style.margin = "10px 0px 0px 10px"
 
