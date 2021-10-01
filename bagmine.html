@@ -1,142 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <style>
-      #basket_item_body{margin-right: 60px;}
-     #main_prod_img{width:180px; padding:10px}
-     .main{margin:auto; display:flex; padding:20px 160px;}
-     .main > div >.row1{width:100px}
-     .col >h1{font-size: 27px;
-              font-weight:350;
-              color:rgb(68, 67, 67);
-              line-height: 48px;
-            padding-top: 40px;
-          padding-bottom: 20px;}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <style>
+    #basket_item_body {
+      margin-right: 60px;
+    }
+
+    #main_prod_img {
+      width: 180px;
+      padding: 10px
+    }
+
+    .main {
+      margin: auto;
+      display: flex;
+      padding: 20px 160px;
+    }
+
+    .main>div>.row1 {
+      width: 100px
+    }
+
+    .col>h1 {
+      font-size: 27px;
+      font-weight: 350;
+      color: rgb(68, 67, 67);
+      line-height: 48px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
 
 
-      .row1{width:700px; border-top: 1px solid rgb(202, 202, 202);}
-      .row1 >div{margin:10px;text-align: center;vertical-align: middle;}
-      .row1>div:nth-child(5){width:30px}
-      .row1>div:nth-child(2){padding:70px 10px; text-align: center;}
-      .row1>div:nth-child(3){padding:60px 30px}
-      .row1>div:nth-child(3) >div{width:40px;height: 40px; padding:2px; border:1px solid rgb(202, 202, 202)}
-      .row1>div:nth-child(4){ padding:70px 10px}
-      .row1>div:nth-child(5){ padding:70px 20px}
+    .row1 {
+      width: 700px;
+      border-top: 1px solid rgb(202, 202, 202);
+    }
 
-      #summary-box{border-top:  1px solid rgb(202, 202, 202); padding-top: 20px;}
-     .row1 >div >div{cursor: pointer;}
+    .row1>div {
+      margin: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
 
-     #summary-box>div{height:60px;display: flex;}
-     #summary-box>div >div{width: 300px;}
-     #summary-box>div >div:nth-child(2){text-align: right; margin-right: 10px}
+    .row1>div:nth-child(5) {
+      width: 30px
+    }
 
-    #main_prod_img{cursor: pointer;}
+    .row1>div:nth-child(2) {
+      padding: 70px 10px;
+      text-align: center;
+    }
 
-     #order_sum_body{width:270px;padding:20px}
-       
-body{font-size: 12px;
- color:rgb(51,51,51);
+    .row1>div:nth-child(3) {
+      padding: 60px 30px
+    }
 
-}
-.row1{display:flex}
-#qty-div{display:flex}
+    .row1>div:nth-child(3)>div {
+      width: 40px;
+      height: 40px;
+      padding: 2px;
+      border: 1px solid rgb(202, 202, 202)
+    }
+
+    .row1>div:nth-child(4) {
+      padding: 70px 10px
+    }
+
+    .row1>div:nth-child(5) {
+      padding: 70px 20px
+    }
+
+    #summary-box {
+      border-top: 1px solid rgb(202, 202, 202);
+      padding-top: 20px;
+    }
+
+    .row1>div>div {
+      cursor: pointer;
+    }
+
+    #summary-box>div {
+      height: 60px;
+      display: flex;
+    }
+
+    #summary-box>div>div {
+      width: 300px;
+    }
+
+    #summary-box>div>div:nth-child(2) {
+      text-align: right;
+      margin-right: 10px
+    }
+
+    #main_prod_img {
+      cursor: pointer;
+    }
+
+    #order_sum_body {
+      width: 270px;
+      padding: 20px
+    }
+
+    body {
+      font-size: 12px;
+      color: rgb(51, 51, 51);
+
+    }
+
+    .row1 {
+      display: flex
+    }
+
+    #qty-div {
+      display: flex
+    }
 
 
-#order_sum_body> div >input{padding:15px 250px 15px 6px;border: 1px solid rgb(168, 165, 165);}
+    #order_sum_body>div>input {
+      padding: 15px 250px 15px 6px;
+      border: 1px solid rgb(168, 165, 165);
+    }
 
-#btn{padding:15px 180px ; border:2px solid rgb(75, 74, 74) ; text-align:center ;background-color: white;}
-#order_sum_body> div >div:nth-child(5){ border-top: 1px solid rgb(192, 188, 188); padding-top:20px}
-#btn{display:none}
+    #btn {
+      padding: 15px 180px;
+      border: 2px solid rgb(75, 74, 74);
+      text-align: center;
+      background-color: white;
+    }
 
-#checkout-btn{padding:15px 120px;background-color: white;}
+    #order_sum_body>div>div:nth-child(5) {
+      border-top: 1px solid rgb(192, 188, 188);
+      padding-top: 20px
+    }
 
-#checkout-btn:hover{background-color: black; color: white;}
-    </style>
+    #btn {
+      display: none;
+    }
+
+    #checkout-btn {
+      background-color: white;
+      text-align: center;
+      width: 300px;
+    }
+
+    #checkout-btn:hover {
+      background-color: black;
+      color: white;
+    }
+    #check-out-btn-div{
+      width: 300px;
+    }
+  </style>
 </head>
+
 <body>
 
 
-    <div class="main">
+  <div class="main">
 
-<!-- Basket column start -->
-
-   
-   <div class="col" id="basket_item_body">
-    <h1>Basket</h1>
-    <p id="empty-cart-notice">You have no items in your shopping cart.
-
-        <a>Click here</a> to continue shopping.</p>
-    
-    <div id="basket_parent">
+    <!-- Basket column start -->
 
 
-     </div>
-  
-   </div>
+    <div class="col" id="basket_item_body">
+      <h1>Basket</h1>
+      <p id="empty-cart-notice">You have no items in your shopping cart.
+
+        <a>Click here</a> to continue shopping.
+      </p>
+
+      <div id="basket_parent">
 
 
-<!-- basket column ends -->
+      </div>
+
+    </div>
 
 
-<!-- Order SUmmary cols start -->
+    <!-- basket column ends -->
 
-   <div class="col" id="order_sum_body">
-  <h1>Order Summary</h1>
-  
-    <div id="summary-box">
-      <p>PROMOCODE</p>
-        
-     
-        <input type="text" placeholder="PROMOCODE" id="promocode-input" >
+
+    <!-- Order SUmmary cols start -->
+
+    <div class="col" id="order_sum_body">
+      <h1>Order Summary</h1>
+
+      <div id="summary-box">
+        <p>PROMOCODE</p>
+
+
+        <input type="text" placeholder="PROMOCODE" id="promocode-input">
 
         <div id="apply-promocode-div">
           <button id="btn">Apply </button>
         </div>
 
-       <div id="num-items-div">
+        <div id="num-items-div">
           <div><span id="num-items-span">4</span><span>x items</span></div>
           <div id="itemscost"></div>
-       </div>
+        </div>
 
-       <div id="costing-div">
-        <div>Delivery</div>
-        <div id="del-cost">0</div>
+        <div id="costing-div">
+          <div>Delivery</div>
+          <div id="del-cost">0</div>
 
-       </div>
+        </div>
 
-       <div id="total-cost-parent-div">
+        <div id="total-cost-parent-div">
 
           <div> TOTAL</div>
-          <div id="total-cost-div"><span>₹</span><span id="finalcost" ></span></div>
+          <div id="total-cost-div"><span>₹</span><span id="finalcost"></span></div>
 
 
-       </div>
+        </div>
 
-       <div id="check-out-btn-div">
+        <div id="check-out-btn-div">
 
-        <button id="checkout-btn">PROOCEED TO CHECKOUT</button>
+          <button id="checkout-btn">PROOCEED TO CHECKOUT</button>
 
-     </div>
-
-
-        
-
-
-
-
-
-    </div>
-
-
-
-   </div>
-
-<!-- Order summary cols end -->
+        </div>
 
 
 
@@ -144,10 +233,25 @@ body{font-size: 12px;
 
 
 
+
+      </div>
 
 
 
     </div>
+
+    <!-- Order summary cols end -->
+
+
+
+
+
+
+
+
+
+
+  </div>
 
 
 
@@ -175,287 +279,292 @@ body{font-size: 12px;
 
   <script>
 
- 
-
-
-
-let freegift={
-name:"FREE - INTENSE REPAIR HAIR CARE RITUAL WORTH ₹875",
-image:"https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
-price:"0",
-qty:"1",
-
-}
 
 
 
 
-
-
-
-var basket_parent=document.getElementById("basket_parent")
-
-
-
-inpt=document.getElementById("promocode-input");
-
-inpt.addEventListener('focus',buttonappear)
-
-btn= document.getElementById("btn")
-function buttonDisappear(){
-    btn.style.display="none";
-
-}
-
-
-function  buttonappear(){
-   
-    btn.style.display="block";
-
-    btn.addEventListener('click',applypromocode)
-
-}
-
-
-
-cartprod=JSON.parse(localStorage.getItem('f_cart'))
-
-function removeitem(prod){
-
-  item=JSON.parse(localStorage.getItem('f_cart'))
-    
-  for(i=0;i<item.length;i++){
-    if(item[i].name==prod.name){item.splice(i,1)}
-  }
-
-
-  localStorage.setItem('f_cart',JSON.stringify(item))
-  basket_parent.innerHTML=null;
-  cartshow(item)
-
-  }
-
-  
-
-
-
-function plusitem(prod){
-  item=JSON.parse(localStorage.getItem('f_cart'))
-    
-    for(i=0;i<item.length;i++){
-      if(item[i].name==prod.name){item[i].qty=item[i].qty+1}
-    }
-  
-  
-    localStorage.setItem('f_cart',JSON.stringify(item))
-    basket_parent.innerHTML=null;
-    cartshow(item)
-  
-
-
-}
-
-
-
-function minusitem(prod){
- 
-  item=JSON.parse(localStorage.getItem('f_cart'))
-    
-    for(i=0;i<item.length;i++){
-    
-      if(item[i].name==prod.name){
-        if(item[i].qty>1){
-        item[i].qty=item[i].qty-1}
-      
-      }
+    let freegift = {
+      name: "FREE - INTENSE REPAIR HAIR CARE RITUAL WORTH ₹875",
+      image: "https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
+      price: "0",
+      qty: "1",
 
     }
-  
-  
-    localStorage.setItem('f_cart',JSON.stringify(item))
-    basket_parent.innerHTML=null;
-    cartshow(item)
-  
-
-
-
-}
 
 
 
 
-   
-
-function cartshow(p){
-
-p.forEach(prod => {
-
-    let row=document.createElement("div");
-   row.setAttribute("class","row1");
-
-   let img_div=document.createElement("div")
-      img_div.setAttribute('id',"img-div")
-      
 
 
-    let img=document.createElement("img") 
-        img.src=prod.image; 
-        img.setAttribute('id','main_prod_img')
-       img_div.append(img);
-       img.onclick=function(){
-        singleprod(prod)
+
+    var basket_parent = document.getElementById("basket_parent")
+
+
+
+    inpt = document.getElementById("promocode-input");
+
+    inpt.addEventListener('focus', buttonappear)
+
+    btn = document.getElementById("btn")
+    function buttonDisappear() {
+      btn.style.display = "none";
+
+    }
+
+
+    function buttonappear() {
+
+      btn.style.display = "block";
+
+      btn.addEventListener('click', applypromocode)
+
+    }
+
+
+
+    cartprod = JSON.parse(localStorage.getItem('f_cart'))
+
+    function removeitem(prod) {
+
+      item = JSON.parse(localStorage.getItem('f_cart'))
+
+      for (i = 0; i < item.length; i++) {
+        if (item[i].name == prod.name) { item.splice(i, 1) }
       }
 
-    let name_div= document.createElement("div")
-      
-        name_div.setAttribute('id',"name-div")
-        name_div.textContent=prod.name
 
-     let qty_div=document.createElement('div')   
-         qty_div.setAttribute('id',"qty-div")
+      localStorage.setItem('f_cart', JSON.stringify(item))
+      basket_parent.innerHTML = null;
+      cartshow(item)
 
-      let qty_div_minus=document.createElement('div')  
-      qty_div_minus.setAttribute('id',"qty-div-minus")
-      qty_div_minus.innerHTML="-"
-      qty_div_minus.onclick=function(){
+      window.location.reload();
+
+    }
+
+
+
+
+
+    function plusitem(prod) {
+      item = JSON.parse(localStorage.getItem('f_cart'))
+
+      for (i = 0; i < item.length; i++) {
+        if (item[i].name == prod.name) { item[i].qty = item[i].qty + 1 }
+      }
+
+
+      localStorage.setItem('f_cart', JSON.stringify(item))
+      basket_parent.innerHTML = null;
+      cartshow(item)
+
+      window.location.reload();
+
+    }
+
+
+
+    function minusitem(prod) {
+
+      item = JSON.parse(localStorage.getItem('f_cart'))
+
+      for (i = 0; i < item.length; i++) {
+
+        if (item[i].name == prod.name) {
+          if (item[i].qty > 1) {
+            item[i].qty = item[i].qty - 1
+          }
+
+        }
+
+      }
+
+
+      localStorage.setItem('f_cart', JSON.stringify(item))
+      basket_parent.innerHTML = null;
+      cartshow(item)
+
+
+      window.location.reload();
+
+    }
+
+
+
+
+
+
+    function cartshow(p) {
+
+      p.forEach(prod => {
+
+        let row = document.createElement("div");
+        row.setAttribute("class", "row1");
+
+        let img_div = document.createElement("div")
+        img_div.setAttribute('id', "img-div")
+
+
+
+        let img = document.createElement("img")
+        img.src = prod.image;
+        img.setAttribute('id', 'main_prod_img')
+        img_div.append(img);
+        img.onclick = function () {
+          singleprod(prod)
+        }
+
+        let name_div = document.createElement("div")
+
+        name_div.setAttribute('id', "name-div")
+        name_div.textContent = prod.name
+
+        let qty_div = document.createElement('div')
+        qty_div.setAttribute('id', "qty-div")
+
+        let qty_div_minus = document.createElement('div')
+        qty_div_minus.setAttribute('id', "qty-div-minus")
+        qty_div_minus.innerHTML = "-"
+        qty_div_minus.onclick = function () {
           minusitem(prod)
-      }
+        }
 
-      let qty_div_curr=document.createElement('div')  
-      qty_div_curr.setAttribute('id',"qty-div-curr")
-      qty_div_curr.innerHTML=prod.qty
-      
+        let qty_div_curr = document.createElement('div')
+        qty_div_curr.setAttribute('id', "qty-div-curr")
+        qty_div_curr.innerHTML = prod.qty
 
-      let qty_div_plus=document.createElement('div')  
-      qty_div_plus.setAttribute('id',"qty-div-plus")
-      qty_div_plus.innerHTML="+"
-      qty_div_plus.onclick=function(){
+
+        let qty_div_plus = document.createElement('div')
+        qty_div_plus.setAttribute('id', "qty-div-plus")
+        qty_div_plus.innerHTML = "+"
+        qty_div_plus.onclick = function () {
           plusitem(prod)
-      }
-    
-     qty_div.append(qty_div_minus,qty_div_curr,qty_div_plus);
+        }
+
+        qty_div.append(qty_div_minus, qty_div_curr, qty_div_plus);
 
 
-     let price_div=document.createElement('div');
-     price_div.setAttribute('id','price-div');
-     let spn1=document.createElement('span')
-     spn1.innerHTML="₹";
+        let price_div = document.createElement('div');
+        price_div.setAttribute('id', 'price-div');
+        let spn1 = document.createElement('span')
+        spn1.innerHTML = "₹";
 
-     let price_span=document.createElement('span')
-     price_span.setAttribute('id','price-span')
-     price_span.innerHTML=prod.price
+        let price_span = document.createElement('span')
+        price_span.setAttribute('id', 'price-span')
+        price_span.innerHTML = prod.price
 
-     price_div.append(spn1,price_span)
-
-
-     let close_btn_div=document.createElement('div');
-     let close_btn=document.createElement('button');
-     close_btn.setAttribute('id','close-btn')
-     
-     close_btn.setAttribute('class','btn-close')
-
-     close_btn.onclick=function(){
-         removeitem(prod)
-     }
-     
-     close_btn_div.append(close_btn)
-
-     row.append(img_div,name_div,qty_div,price_div,close_btn_div)
-
-     basket_parent.append(row)
-
-    
-});
- 
-}
+        price_div.append(spn1, price_span)
 
 
+        let close_btn_div = document.createElement('div');
+        let close_btn = document.createElement('button');
+        close_btn.setAttribute('id', 'close-btn')
+
+        close_btn.setAttribute('class', 'btn-close')
+
+        close_btn.onclick = function () {
+          removeitem(prod)
+        }
+
+        close_btn_div.append(close_btn)
+
+        row.append(img_div, name_div, qty_div, price_div, close_btn_div)
+
+        basket_parent.append(row)
 
 
+      });
 
-cartshow(cartprod)
-
-
-
-
-let emptycartnotifier_p=document.getElementById("empty-cart-notice")
-
-if(cartprod.length==0){
-emptycartnotifier_p.style.display="block";}
-
-else{emptycartnotifier_p.style.display="none"}
-
-
-
-
-
-function totalcost(){
-   let total=0;
-    for(i=0;i<cartprod.length;i++){
-     total=total+ cartprod[i].price.replace(',',"")*Number(cartprod[i].qty);
-      
     }
 
-    return total;
-}
-
-let totalCost=totalcost();
-  
-
-let cart_items=document.getElementById("num-items-span")
-          cart_items.textContent=cartprod.length; 
-
-
-function costshow(totalCost){
-
-    let total_cost=document.getElementById("itemscost")
-         total_cost.innerHTML=totalCost
-      
-      
-
-      let final_total=document.getElementById("finalcost")
-      finalcost.textContent=totalCost;
-
-}
-      
-costshow(totalCost)      
 
 
 
 
-function applypromocode() {
-
-let code =document.getElementById("promocode-input").value
-
- if(code=="masai30"){var discountedcost=Number(totalCost)-0.3*Number(totalCost)}
-     
- 
-
- costshow(discountedcost)
-
-
-}     
+    cartshow(cartprod)
 
 
 
 
-function singleprod(product){
+    let emptycartnotifier_p = document.getElementById("empty-cart-notice")
 
- 
- 
- localStorage.setItem('s_p',JSON.stringify(product))
+    if (cartprod.length == 0) {
+      emptycartnotifier_p.style.display = "block";
+    }
 
- 
-  
-  window.location.href="product_single.html"
-}
+    else { emptycartnotifier_p.style.display = "none" }
 
 
-  
 
-  </script>  
+
+
+    function totalcost() {
+      let total = 0;
+      for (i = 0; i < cartprod.length; i++) {
+        total = total + cartprod[i].price.replace(',', "") * Number(cartprod[i].qty);
+
+      }
+
+      return total;
+    }
+
+    let totalCost = totalcost();
+
+
+    let cart_items = document.getElementById("num-items-span")
+    cart_items.textContent = cartprod.length;
+
+
+    function costshow(totalCost) {
+
+      let total_cost = document.getElementById("itemscost")
+      total_cost.innerHTML = totalCost
+
+
+
+      let final_total = document.getElementById("finalcost")
+      finalcost.textContent = totalCost;
+
+    }
+
+    costshow(totalCost)
+
+
+
+
+    function applypromocode() {
+
+      let code = document.getElementById("promocode-input").value
+
+      if (code == "masai30") { var discountedcost = Number(totalCost) - 0.3 * Number(totalCost) }
+
+
+
+      costshow(discountedcost)
+
+
+    }
+
+
+
+
+    function singleprod(product) {
+
+
+
+      localStorage.setItem('s_p', JSON.stringify(product))
+
+
+
+      window.location.href = "product_single.html"
+    }
+
+
+
+
+  </script>
 
   <script src="bagscript.js"></script>
-    
+
 </body>
+
 </html>
