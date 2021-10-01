@@ -119,6 +119,7 @@ function show_best_seller(best_seller_product) {
 
     if (product.currency == "$") {
       price.textContent = product.currency + " " + (price_num / 70).toFixed(2);
+      product.price=(price_num/70).toFixed(2);
     }
 
     // currency conversiom end-------
@@ -174,6 +175,7 @@ function show_gifts(gifts_section) {
 
     if (gifts.currency == "$") {
       price.textContent = gifts.currency + " " + (price_num / 70).toFixed(2);
+      gifts.price=(price_num/70).toFixed(2);
     }
 
     // currency conversiom end-------
@@ -224,7 +226,7 @@ if (localStorage.getItem("f_cart") == null) {
 }
 
 function add_to_cart(p) {
-
+  
   let products_cart = JSON.parse(localStorage.getItem("f_cart"));
 
   let Incart = true;
@@ -315,7 +317,11 @@ function create() {
 
     total = total + parseInt(price_num) * item.qty;
 
-    price_quantity.textContent = "QTY " + item.qty + " " + "  ₹" + item.price;
+    price_quantity.textContent = "QTY " + item.qty + " " + item.currency+"  " + item.price;
+
+    if (item.currency == "$") {
+      price_quantity.textContent = "QTY " + item.qty + " " + item.currency+" " + item.price;
+    }
     text_div.append(name, price_quantity);
 
     container.append(img_div, text_div);
@@ -324,6 +330,10 @@ function create() {
   });
 
   total_div.innerHTML = "CART SUBTOTAL " + " ₹" + total;
+
+  if (cart_items[1].currency == "$") {
+    total_div.innerHTML = "CART SUBTOTAL " + " $" + total;
+  }
   total_div.style.margin = "10px 0px 0px 10px"
 
 }
