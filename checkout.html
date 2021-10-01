@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkout</title>
     <style>
-       
         body {
             margin: 0;
             padding: 0;
@@ -129,28 +128,39 @@
 
 
         }
-        #order_details{
-            display:flex;
-            width:100%;
+
+        #order_details {
+            display: flex;
+            width: 100%;
         }
-          #order_details>div>{
-            width:300px;
+
+        #order_details>div> {
+            width: 300px;
 
         }
-        #order_details>div>p{
-            width:300px;
+
+        #order_details>p {
+            width: 300px;
+            font-family: "calibri";
+            font-weight: 400;
+            color: #333;
+            font-size: 15px;
         }
-        .page_header{
+
+        .page_header {
             background-color: #FBF9F9;
         }
-        .page_header>div>a>img{
+
+        .page_header>div>a>img {
             width: 150px;
         }
-        .page_header>div{
+
+        .page_header>div {
             width: 150px;
             margin: auto;
-            padding-bottom: 20px;
-            
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+
         }
     </style>
 </head>
@@ -158,12 +168,12 @@
 <body>
     <div id="top_nav_bar" class="top_nav center_text"> </div>
 
-    
-  <!---Middle Nav Start-->
+
+    <!---Middle Nav Start-->
     <div class="page_header">
-          <div><a href="index.html"><img src="images\FE-Logo_1.png" alt="" id="logo"></a></div>
-     </div>
-  <!----Middle Nav End-->
+        <div><a href="index.html"><img src="images\FE-Logo_1.png" alt="" id="logo"></a></div>
+    </div>
+    <!----Middle Nav End-->
 
 
 
@@ -206,16 +216,16 @@
                 </div>
                 <div>
                     <span class="span">FIRST NAME<span class="redcolor">* </span></span>
-                        <p></p>
-                        <input id="fname" type="text" placeholder="" />
+                    <p></p>
+                    <input id="fname" type="text" placeholder="" />
                 </div>
             </div>
 
             <div>
                 <div>
                     <span class="span"> LAST NAME <span class="redcolor">*</span></span>
-                        <p></p>
-                        <input id="lname" type="text" placeholder="" />
+                    <p></p>
+                    <input id="lname" type="text" placeholder="" />
                 </div>
             </div>
             <span class="span">STREET ADDRESS <span class="redcolor">*</span></span>
@@ -223,49 +233,49 @@
             <hr>
             <p></p>
 
-              <div>
-                <div> <span class="span">   </span>
+            <div>
+                <div> <span class="span"> </span>
                     <p></p>
-                    <input  type="text" placeholder="" />
-                  </div>
-               
-                  <div> <span class="span"> </span>
-                    <p></p> 
                     <input type="text" placeholder="" />
-                  </div> 
-              </div>
-              <div>
-                   <div> <span class="span"> CITY <span class="redcolor">*</span> </span>
+                </div>
+
+                <div> <span class="span"> </span>
                     <p></p>
-                    <input  type="text" placeholder="" />
-                  </div>
-                  <div> <span class="span">STATE/PROVINCE  <span class="redcolor">*</span>  </span>
+                    <input type="text" placeholder="" />
+                </div>
+            </div>
+            <div>
+                <div> <span class="span"> CITY <span class="redcolor">*</span> </span>
                     <p></p>
-                    <input  type="text" placeholder="" />
-                  </div>
+                    <input type="text" placeholder="" />
+                </div>
+                <div> <span class="span">STATE/PROVINCE <span class="redcolor">*</span> </span>
+                    <p></p>
+                    <input type="text" placeholder="" />
+                </div>
+            </div>
+            <div>
+                <div> <span class="span">ZIP/POSTAL CODE <span class="redcolor">*</span> </span> </span>
+                    <p></p>
+                    <input type="text" placeholder="" />
                 </div>
                 <div>
-                      <div> <span class="span">ZIP/POSTAL CODE  <span class="redcolor">*</span>  </span> </span>
-                        <p></p> 
-                        <input type="text" placeholder="" />
-                      </div> 
-                      <div>
-                        <span class="span">COUNTRY </span>
-                       <p></p>
-                       <select class="select_title" title="Select Country">
-                           <option value="">India</option>
-                           <option value="Afganisthan">Afganisthan</option>
-                           <option value="Austraila">Australia </option>
-                           <option value="china">CHINA </option>
-                           <option value="japan"> Japan</option>
-                           <option value="france">France </option>
-                           <option value="paris">Paris </option>
-                           <option value="Uk">UK </option>
-   
-                       </select>
-                   </div>
-                  </div>
-                   <div>
+                    <span class="span">COUNTRY </span>
+                    <p></p>
+                    <select class="select_title" title="Select Country">
+                        <option value="">India</option>
+                        <option value="Afganisthan">Afganisthan</option>
+                        <option value="Austraila">Australia </option>
+                        <option value="china">CHINA </option>
+                        <option value="japan"> Japan</option>
+                        <option value="france">France </option>
+                        <option value="paris">Paris </option>
+                        <option value="Uk">UK </option>
+
+                    </select>
+                </div>
+            </div>
+            <div>
                 <div>
                     <span class="span">PHONE NO <span class="redcolor">*</span>
                         <p></p>
@@ -277,14 +287,17 @@
                 <p></p>
                 <hr>
                 <p></p>
-            </div id="order_details">
+                <div id="order_details">
+
+                </div>
+            </div>
 
             <div>
                 <button type="submit"> PROCEDE TO PAYMENT </button>
 
             </div>
         </form>
-       
+
     </div>
 </body>
 
@@ -315,32 +328,35 @@
     top_nav();
 
     let orders = document.getElementById("order_details");
-    
-    let order_details = JSON.parse(localStorage.getItem("f_cart"));
-   
 
-    let quant = 0;
-        let rate = "";
-        let cart_total = 0;
-   for(i=0;i<order_details.length;i++){
-       quant=quant+order_details[i].qty;
-       rate=order_details[i].price;
-       cart_total=quant*Number(rate);
-   }
-    function order_summary(quant,rate,cart_total){
-      
-    let div = document.createElement("div");
-      let quantity=document.createElement("p");
-         quantity.textContent=quant+" x items";
-        let price=document.createElement("p");
-         price.textContent="₹"+rate ; 
-        let dilivery=document.createElement("p");
-        dilivery.textContent="₹65"
-         let total=document.createElement("p");
-         total.textContent="₹"+cart_total ;
-        div.append(quantity,price,dilivery,total);
-         console.log(div);
-         orders.append(div);
-     }
-     order_summary(quant,rate,cart_total);
+    let order_items = JSON.parse(localStorage.getItem("f_cart"));
+
+
+    function order_summary() {
+        let total_amount = 0;
+        order_items.forEach(function (item) {
+
+            let price_num = "";
+            for (let i = 0; i < item.price.length; i++) {
+                if (item.price[i] != ",") {
+                    price_num += item.price[i];
+                }
+            }
+            total_amount = total_amount + Number(price_num) * item.qty;
+
+        });
+
+        let item_box = document.createElement("p");
+        item_box.textContent = order_items.length + " items "+order_items[0].currency + total_amount;
+        let delivery_box = document.createElement("p");
+        delivery_box.textContent = "Delivery(Fixed rate)  0.00";
+        let total_box = document.createElement("p");
+        total_box.textContent = "Total " + order_items[0].currency+ total_amount;
+        let hr = document.createElement("hr");
+        orders.append(item_box, delivery_box,hr, total_box);
+    }
+
+
+
+    order_summary();
 </script>
