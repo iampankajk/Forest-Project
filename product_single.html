@@ -111,7 +111,7 @@ body{font-family: calibre;}
 
 <h1 class="product_name" id="prod_name">Hair Care Ritual For Glossy Hair</h1>
 
-<p class="product_small_description">Cleanse, replenish and nourish the scalp with our Hair Care Ritual for Glossy Hair, enriched with Amla, Japapatti, Honey & Mulethi. This ritual includes:</p>
+<p class="product_small_description" id="prod_small_des">Cleanse, replenish and nourish the scalp with our Hair Care Ritual for Glossy Hair, enriched with Amla, Japapatti, Honey & Mulethi. This ritual includes:</p>
 
 
 <h3 class="big_price"><span>₹</span><span id="prod_price_span">4,500.00</span></h3>
@@ -342,14 +342,15 @@ localStorage.setItem('subscription_user',JSON.stringify(arr));
 
  let prod=JSON.parse(localStorage.getItem('s_p'))
 
-  doucment.getElementById("prod_name").innerHTML=prod.name;
+  document.getElementById("prod_name").innerHTML=prod.name;
 
   document.getElementById("prod_price_span").innerHTML=prod.price;
+  document.getElementById("prod_img").src=prod.image
+  document.getElementById("prod_small_des").innerHTML=prod.description
+  console.log(prod.image)
 
-  console.log(prod)
 
-
-
+  
 
     
 </script>

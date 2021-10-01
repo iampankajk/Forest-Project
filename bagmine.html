@@ -246,7 +246,7 @@ p.forEach(prod => {
 
 
     let img=document.createElement("img") 
-        img.src=prod.img 
+        img.src=prod.image; 
        img_div.append(img);
 
     let name_div= document.createElement("div")
@@ -390,7 +390,7 @@ function singleprod(product){
 
   let p= JSON.parse(localStorage.getItem('s_p')) 
   
-
+  window.location.href="product_single.html"
 }
 
 
