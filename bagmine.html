@@ -180,21 +180,29 @@ function  buttonappear(){
 
 
 
-
+cartprod=JSON.parse(localStorage.getItem('f_cart'))
 
 function removeitem(prod){
     var newarr=[];
-    for(i=0;i<product.length;i++){
-        let check=(product[i].name==prod.name);
-        if(check==false){newarr.push(product[i])}
+    for(i=0;i<cartprod.length;i++){
+        let check=(cartprod[i].name==prod.name);
+        if(check==false){newarr.push(cartprod[i])}
     }
   
     console.log(newarr)
-  
+    localStorage.setItem('f_cart',JSON.stringify(newarr))
      basket_parent.innerHTML=null;
-
-     cartshow(newarr)
+     
+     chngedarr=JSON.parse(localStorage.getItem('f_cart'))
+   
+     cartshow(chngedarr)
   }
+
+
+
+
+
+
 
 
 function plusitem(prod){
@@ -298,7 +306,7 @@ p.forEach(prod => {
 
 
 
-cartprod=JSON.parse(localStorage.getItem('f_cart'))
+
 
 cartshow(cartprod)
 
