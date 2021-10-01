@@ -92,6 +92,10 @@ function show_best_seller(best_seller_product) {
     let img = document.createElement("img");
     img.src = product.image;
 
+    img.onclick = function () {
+      singleprod(product)
+    }
+
     let name = document.createElement("p");
     name.textContent = product.name;
 
@@ -150,6 +154,10 @@ function show_gifts(gifts_section) {
 
     let img = document.createElement("img");
     img.src = gifts.image;
+
+    img.onclick = function () {
+      singleprod(gifts)
+    }
 
     let name = document.createElement("p");
     name.textContent = gifts.name;
@@ -555,3 +563,14 @@ show_testimonial()
 
 
 // testimonial ends
+
+
+
+
+
+function singleprod(product) {
+
+  localStorage.setItem('s_p', JSON.stringify(product))
+
+  window.location.href = "product_single.html"
+}

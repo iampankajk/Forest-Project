@@ -79,11 +79,15 @@ body{
 .wrapper>div>img {
   width: 100%;
 }
-#cart_container>span>button{
+#cart_container>span>a>button{
  width: 300px;
  padding: 15px;
  font-family: "calibri";
  border: solid 1px #333;
+}
+#cart_container>span>a>button:hover{
+  background-color: black;
+  color: white;
 }
 #cart_container>span{
 margin-left: 8%;
