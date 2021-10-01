@@ -350,10 +350,8 @@ else{emptycartnotifier_p.style.display="none"}
 function totalcost(){
    let total=0;
     for(i=0;i<cartprod.length;i++){
-      q=Number(cartprod[i].qty)
-      p=parseFloat(cartprod[i].price) +parseInt(cartprod[i].price)
-    
-      total=total+(q*p)
+     total=total+ Number(cartprod[i].qty)*parseFloat(cartprod[i].price);
+      
     }
 
     return total;
