@@ -574,3 +574,31 @@ function singleprod(product) {
 
   window.location.href = "product_single.html"
 }
+
+
+// newsletter
+
+subs_name = document.getElementById("news_subs_name")
+subs_email = document.getElementById("news_sub_email")
+
+function news_subs() {
+
+    subs_user = {
+        subs_name: subs_name,
+        subs_email: subs_email
+    }
+
+
+    if (localStorage.getItem('subscription_user') == null) { localStorage.setItem('subscription_user', JSON.stringify([])) }
+
+    arr = JSON.parse(localStorage.getItem('subscription_user'))
+
+    arr.push(subs_user);
+
+
+
+    localStorage.setItem('subscription_user', JSON.stringify(arr));
+
+
+
+}

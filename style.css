@@ -790,3 +790,28 @@ body {
 }
 
 /* testimonial css ends */
+
+
+/* newsletter */
+.row1 {
+  margin: auto;
+  background-color: #FBF9F9;
+  padding-top: 10px;
+}
+.news_letter {
+  width: 700px
+}
+
+.news_letter>input {
+  padding: 15px 30px 15px 10px;
+  width: 600px
+}
+
+
+.center_text {
+  text-align: center;
+}
+
+.center-item {
+  align-items: center;
+}
