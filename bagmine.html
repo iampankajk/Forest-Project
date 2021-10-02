@@ -1054,6 +1054,7 @@
       if (promocode === "masai30" && count < 1) {
         var discountedcost = Number(totalCost) - (0.3 * Number(totalCost)).toFixed(2);
         count++;
+        localStorage.setItem("promo",JSON.stringify([discountedcost]));
         costshow(discountedcost)
 
       } else if (count == 1) {

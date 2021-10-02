@@ -345,7 +345,10 @@
             total_amount = total_amount + Number(price_num) * item.qty;
 
         });
-
+        if(JSON.parse(localStorage.getItem("promo"))!=null){
+            total_amount=JSON.parse(localStorage.getItem("promo"));
+            total_amount=total_amount[0];
+        }
         let item_box = document.createElement("p");
         item_box.textContent = order_items.length + " items "+order_items[0].currency + total_amount;
         let delivery_box = document.createElement("p");
