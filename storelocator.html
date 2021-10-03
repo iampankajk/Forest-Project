@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="./index.js"></script>
+    <style>
+       body{
+     font-family: "calibri";
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: "calibri";
+    font-weight: 400;
+    color: #333;
+    line-height: 1.42857143;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+}
+  
+
+
+#top_nav_bar {
+
+  background-color: rgb(51, 51, 51);
+  color: white;
+  padding: 10px 0px;
+  position: static;
+
+  width: inherit;
+  margin-top: -10px;
+  margin-left: -10;
+  margin-right: -10;
+  top: 0;
+  z-index: 100;
+  font-family: "calibri";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+
+
+}
+
+#cart_container{
+  background-color: white;
+  position:absolute;
+  width: 350px;
+  height: 450px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 50px;
+  z-index: 10000;
+  display: none;
+}
+#cart_show {
+  background-color: white;
+  width: 350px;
+  height: 450px;
+  float: right;
+  overflow-y: scroll;
+  font-family: "calibri";
+}
+#cart_show>span>a>img{
+  float: right;
+  width: 25px;
+}
+.wrapper {
+  display: grid;
+  width: 320px;
+  margin: auto;
+  grid-template-columns: 100px 200px;
+  grid-gap: 20px;
+
+
+}
+
+.wrapper::after {
+  content: " ";
+  height: 0.5px;
+  background-color:#333;
+  width: 320px;
+}
+
+.wrapper>div>img {
+  width: 100%;
+}
+#cart_container>span>a>button{
+ width: 300px;
+ padding: 15px;
+ font-family: "calibri";
+ border: solid 1px #333;
+}
+#cart_container>span>a>button:hover{
+  background-color: black;
+  color: white;
+}
+#cart_container>span{
+margin-left: 8%;
+}
+
+.sticky_header {
+  background-color: #FBF9F9;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "calibri";
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page_content {
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+  gap: 1px;
+
+}
+
+.hr {
+  margin: 0px auto;
+  max-width: 1200px;
+  height: 1px;
+  background-color: #333;
+}
+
+.page_content>div {
+  flex-basis: 400px;
+  margin: auto;
+  padding: 5px;
+}
+
+.page_content>div>span {
+  margin: auto 10px;
+}
+
+.page_content>div:nth-child(3)>span {
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.page_content>div:nth-child(2)>span {
+  margin-left: 30px;
+}
+
+.page_content>div>span>button {
+  background-color: transparent;
+  border: none;
+}
+
+#logo {
+  width: 33%;
+  margin-left: 30%;
+}
+
+#cart_total{
+  cursor: pointer;
+  text-align: center;
+  padding: 3px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: #FBF9F9;
+  border-radius: 50%;
+}
+.nav_sections{
+  max-width: 1200px;
+  margin: auto;
+
+}
+.nav_sections ul{
+ display: flex;
+ list-style: none;
+ flex-wrap: wrap;
+
+}
+.nav_sections ul li{
+ margin: auto;
+ padding: 10px;
+ background-color: #FBF9F9;
+ z-index: 999;
+
+}
+.row{
+ display: flex;
+ margin: 20px auto;
+}
+.row>div{
+ flex-basis: 500px;
+ margin: auto;
+}
+.row>div>img{
+ width: 600px;
+ margin: auto;
+}
+.mega_box{
+ position: absolute;
+ width: 100%;
+ display: none;
+ background-color: #FBF9F9;
+ right: 0;
+ 
+}
+
+.nav_sections ul li:hover .mega_box{
+ display: block;
+ background-color: #FBF9F9;
+ margin: auto;
+}
+.col-1 ul,.col-2 ul{
+ display: block;
+}
+.col-1,.col-2{
+ margin: 0;
+}
+
+
+
+
+        /* Footer */
+        footer {
+      background-color: #FBF9F9;
+    }
+
+    body {
+      color: rgb(51, 51, 51);
+      font-family: "calibri";
+    }
+
+    .grid-box1>div>div:nth-child(2) {
+
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 29.7px;
+      color: rgb(51, 51, 51);
+
+
+    }
+
+
+    .grid-box2>div {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 36px;
+
+      color: rgb(88, 86, 86);
+
+    }
+
+    .grid-box3 {
+
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 49% 49%;
+      padding: 20px 150px;
+    }
+
+    .grid-box3>div {
+      border-top: 1px solid#bfbfbf;
+      padding-top: 10px;
+    }
+
+
+
+    #payment_bottom {
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 15.7143px;
+
+    }
+
+    #payment_bottom>img {
+
+      width: 580px;
+
+      margin-top: 50px;
+    }
+
+    .grid-box1,
+    .grid-box2 {
+      display: grid;
+      grid-gap: 20px;
+      padding: 20px 150px;
+      grid-template-columns: 24% 24% 24% 24%;
+      grid-template-rows: 49.5% 49, 5%;
+    }
+
+    .icon-content {
+      line-height: 22px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    .grid-box2>div {
+      border-top: 1px solid#bfbfbf;
+    }
+
+    .grid-box1>div {
+      border-top: 1px solid#bfbfbf;
+    }
+
+    .icon {
+      border: 1px solid #bfbfbf;
+      border-radius: 50%;
+      margin: 20px 10px;
+    }
+
+    .icon>img {
+      margin-left: 10px;
+      margin-top: 5px
+    }
+
+    .center-box {
+      margin: auto;
+    }
+
+    .icon-box>div {
+      padding: 20px
+    }
+
+
+
+
+    .grid-box2>div>div:nth-child(1) {
+      margin-bottom: 20px;
+    }
+
+
+
+    #contact_div {
+
+      line-height: 18px;
+    }
+
+    #contact_div>div {
+
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+
+    /* Map */
+    .section_name{
+    
+    }
+    .fz-14 {
+      font-size: 14px;
+    }
+    .map_detailes {
+      height: 500px;
+      width: 300px;
+      background-color: white;
+      position: absolute;
+      top: 16rem;
+      left: 10px;
+      overflow: scroll;
+    }
+
+    .map{
+      position: relative;
+    }
+    .searchbar_container {
+      position: absolute;
+      top: 12rem;
+      left: 10px;
+      width: 400px;
+      height: 75px;
+      background-color: white;
+    }
+    .searchbar {
+      background-color: white;
+      width: 350px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid black;
+      margin: 1rem;
+    }
+    .address_search_input {
+      outline: none;
+      padding: 0.8rem;
+    }
+    .address_search_input:focus {
+      border: none;
+    }
+    .fas {
+      margin-right: 5px;
+    }
+    .address {
+      padding: 0 0 0 10px;
+      margin: 5px;
+    }
+    .lh-2 {
+      line-height: 20px;
+    }
+    .m-0 {
+      margin: 0;
+    }
+    .map_address{
+      border-bottom: 1px solid gray;
+    }
+    .map_address > .top {
+      display: flex;
+      align-items: center;
+    }
+    .circle {
+      position: relative;
+      background-color: black;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      margin-left: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+    .circle > .count {
+      position: absolute;
+      top: -7px;
+      left: 9px;
+    }
+    .list_head {
+      display: flex;
+      font-size: 14px;
+      text-align: center;
+    }
+    .list_head > p {
+      margin: -2px 0 0;
+    }
+    .list_head > i {
+      margin: 0 10px;
+    }
+    .time_schedule li {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 11px;
+    }
+    li p {
+      margin: 7px;
+    }
+    .hidden_dropdown{
+      display: none;
+    }
+    
+    .activate_dropdown{
+      display: block;
+    }
+    .store_name{
+      margin-left: 40px;
+    }
+    @media only screen and (max-width: 767px){
+      .map_detailes,.searchbar_container {
+        position: static;
+        width: 100%;
+    }
+    .map_address{
+      border: 1px solid gray;
+    }
+ 
+    }
+
+
+    #map {
+  height: 80%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+  </style>
+    </style>
+</head>
+
+<body>
+<!-- Header Start -->
+<div class="sticky_header">
+  <div class="page_header">
+    <div class="page_content">
+      <div>
+        <span><img src="images\search-icon.png" alt=""></span>
+        <span> <a href="#">STORES</a></span>
+        <span>
+          <select name="" id="currency" onchange="change_currency()">
+            <option value="₹">INR ₹</option>
+            <option value="$">USD $</option>
+          </select>
+        </span>
+      </div>
+      <div>
+        <span><a href="index.html"><img src="images\FE-Logo_1.png" alt="" id="logo"></a></span>
+      </div>
+      <div>
+        <span> <a href="accounts.html">ACCOUNT</a></span>
+        <span>
+          <a href="#">WISHLIST</a>
+        </span>
+        <span><a onclick="show_cart()"><img src="images\cart-icon.png" alt=""><span id="cart_total">0</span></a></span>
+        <div id="cart_container">
+          <div id="cart_show">
+              <span><a onclick="close_cart()"><img src="images\cross-icon.svg" alt=""></a></span>
+          </div>
+          
+          <span><a href="bagmine.html"><button>GO TO BAGS</button></a></span>
+         
+      </div>
+
+      </div>
+    </div>
+    <div class="hr">
+      <hr>
+    </div>
+
+  </div>
+  <div class="nav_sections">
+    <ul>
+      <li>
+        <img src="images\fe-new2.png" alt="">
+      </li>
+      <li>
+        <a href="">BESPOKEN SERVICES</a>
+        <div class="mega_box">
+          <div class="content">
+            <div class="row">
+              <div>
+                <img src="images\Ayurvedic-Consult-Top-Nav.png" alt="">
+              </div>
+              <div>
+                <img src="images\Customised_Cream_764x188.jpg" alt="">
+              </div>
+            </div>
+
+          </div>
+
+        </div> 
+
+        
+      </li>
+      <li>
+        <a href="">FACIAL CARE</a>
+        <div class="mega_box">
+          <div class="content">
+            <div class="row">
+              <div class="col-1">
+                <header>SHOP BY CATEGORY</header>
+                <ul>
+
+                  <li>CLEANSERS</li>
+                  <li>TONERS</li>
+                </ul>
+              </div>
+              <div class="col-2">
+                <header>SHOP BY CONCERN</header>
+                <ul>
+                  <li>ACNE</li>
+                  <li>DRYNESS</li>
+                  <li>DULLNESS</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <a href=""> BODY CARE</a>
+        <div class="mega_box">
+          <div class="content">
+            <div class="row">
+              <div class="col-1">
+                <header>SHOP BY CATEGORY</header>
+                <ul>
+
+                  <li>CLEANSERS</li>
+                  <li>TONERS</li>
+                </ul>
+              </div>
+              <div class="col-2">
+                <header>SHOP BY CONCERN</header>
+                <ul>
+                  <li>ACNE</li>
+                  <li>DRYNESS</li>
+                  <li>DULLNESS</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <a href="">HAIR CARE</a>
+        <div class="mega_box">
+          <div class="content">
+            <div class="row">
+              <div class="col-1">
+                <header>SHOP BY CATEGORY</header>
+                <ul>
+
+                  <li>CLEANSERS</li>
+                  <li>TONERS</li>
+                </ul>
+              </div>
+              <div class="col-2">
+                <header>SHOP BY CONCERN</header>
+                <ul>
+                  <li>ACNE</li>
+                  <li>DRYNESS</li>
+                  <li>DULLNESS</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+      <li>
+        MAKEUP
+      </li>
+      <li>
+        WELLNESS
+      </li>
+      <li>
+        GIFTING
+      </li>
+      <li>
+        RITUALS
+      </li>
+      <li>
+        COLLECTIONS
+      </li>
+      <li>
+        DISCOVER
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Header End -->
+
+<!-- Map Start -->
+
+<h2 class="section_name">Store Locator</h2>
+   
+<div id="map"></div>
+
+<div class="searchbar_container">
+<div class="searchbar fz-14">
+  <input
+    type="text"
+    class="address_search_input"
+    placeholder="ENTER A LOCATION"
+  />
+  <i class="fas fa-search"></i>
+</div>
+</div>
+<div class="map_detailes">
+    <!-- Dummy Data -->
+<div class="map_address">
+  <div class="top" id="topDiv">
+    <div class="circle">
+      <p class="count">1</p>
+    </div>
+    <div class="store_name">
+      <p class="name fz-14">UTKAL KANIKA GALLERIA, BHUBANESWAR</p>
+    </div>
+  </div>
+  <div class="bottom fz-14" id="bottomDiv">
+    <p class="address">City: Bhubaneswar</p>
+    <p class="address">Zip: 751014</p>
+    <p class="address">State: Odisha</p>
+    <p class="address lh-2">Address:  Shop No – 19 , Ground Floor,Utkal Galleria,Near Kalpana Square,Gautam nagar,Bhubaneswar</p>
+    <p class="address">Phone: 0674 295 9900</p>
+
+    
+    <ul class="time_schedule">
+      <li>
+        <div class="list_head">
+          <i class="far fa-clock"></i>
+          <p class="time">Work Time Today : 10:30 - 10:00</p>
+          <i class="fas fa-chevron-down" id="dropdown_btn" onclick="dropdown(1)"></i>
+        </div>
+      </li>
+        <div class="hidden_dropdown dropdown">
+      <li>
+        <p class="day">Monday:</p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Tuesday:</p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Wednesday: </p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Thursday: </p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Friday: </p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Saturday: </p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+      <li>
+        <p class="day">Sunday: </p>
+        <p class="time">10:30 - 10:00</p>
+      </li>
+    </div>
+    </ul>
+  </div>
+</div>
+
+
+<div class="map_address">
+    <div class="top" id="topDiv">
+      <div class="circle">
+        <p class="count">2</p>
+      </div>
+      <div class="store_name">
+        <p class="name fz-14">RAIPUR AIRPORT STORE</p>
+      </div>
+    </div>
+    <div class="bottom fz-14" id="bottomDiv">
+      <p class="address">City: Raipur</p>
+      <p class="address">Zip: 492015</p>
+      <p class="address">State: Chhattisgarh</p>
+      <p class="address lh-2">Address:SWAMI VIVEKANAND AIRPORT, RAMCHANDI, ATAL NAGAR, RAIPUR</p>
+      <p class="address">Phone: 033-7712418844</p>
+  
+      
+      <ul class="time_schedule">
+        <li>
+          <div class="list_head">
+            <i class="far fa-clock"></i>
+            <p class="time">Work Time Today : 10:30 - 10:00</p>
+          <i class="fas fa-chevron-down" id="dropdown_btn" onclick="dropdown(2)"></i>
+            
+          </div>
+        </li>
+          <div class="hidden_dropdown dropdown">
+        <li>
+          <p class="day">Monday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Tuesday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Wednesday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Thursday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Friday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Saturday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Sunday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+      </div>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="map_address">
+    <div class="top" id="topDiv">
+      <div class="circle">
+        <p class="count">3</p>
+      </div>
+      <div class="store_name">
+        <p class="name fz-14">BANGALORE AIRPORT</p>
+      </div>
+    </div>
+    <div class="bottom fz-14" id="bottomDiv">
+      <p class="address">City: Bangalore</p>
+      <p class="address">Zip: 560300</p>
+      <p class="address">State: Karnataka</p>
+      <p class="address lh-2">Address: Shop # - T01-1-692, Terminal Building -1, BIAL Building Code : T1, First Level, International Security Hold Area</p>
+      <p class="address">Phone: 03-47406411</p>
+  
+      
+      <ul class="time_schedule">
+        <li>
+          <div class="list_head">
+            <i class="far fa-clock"></i>
+            <p class="time">Work Time Today : 10:30 - 10:00</p>
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+          </div>
+        </li>
+          <div class="hidden_dropdown dropdown">
+        <li>
+          <p class="day">Monday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Tuesday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Wednesday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Thursday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Friday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Saturday: :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Sunday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+      </div>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <div class="map_address">
+    <div class="top" id="topDiv">
+      <div class="circle">
+        <p class="count">4</p>
+      </div>
+      <div class="store_name">
+        <p class="name fz-14">VR NAGPUR MALL</p>
+      </div>
+    </div>
+    <div class="bottom fz-14" id="bottomDiv">
+      <p class="address">City: Nagpur</p>
+      <p class="address">Zip: 440003</p>
+      <p class="address">State: Maharashtra</p>
+      <p class="address lh-2">Address: Shop No 3, VR Nagpur Mall, Medical Square, Untkhana, Nagpur - 440003, Maharashtra</p>
+      <p class="address">Phone: +91-712-6781053</p>
+  
+      
+      <ul class="time_schedule">
+        <li>
+          <div class="list_head">
+            <i class="far fa-clock"></i>
+            <p class="time">Work Time Today : 10:30 - 10:00</p>
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+          </div>
+        </li>
+          <div class="hidden_dropdown dropdown">
+        <li>
+          <p class="day">Monday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Tuesday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Wednesday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Thursday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Friday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Saturday: </p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Sunday:</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+      </div>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="map_address">
+    <div class="top" id="topDiv">
+      <div class="circle">
+        <p class="count">5</p>
+      </div>
+      <div class="store_name">
+        <p class="name fz-14">ESPLANADE MALL, BHUBANESWAR</p>
+      </div>
+    </div>
+    <div class="bottom fz-14" id="bottomDiv">
+      <p class="address">City: Bhubaneswar</p>
+      <p class="address">Zip: 751010</p>
+      <p class="address">State: Odisha</p>
+      <p class="address lh-2">Address: Esplanade one, Shop no-UG7, first floor, Puri Cuttack Road, Industrial Estate, Rasulgarh</p>
+      <p class="address">Phone: 033-40629036</p>
+  
+      
+      <ul class="time_schedule">
+        <li>
+          <div class="list_head">
+            <i class="far fa-clock"></i>
+            <p class="time">Work Time Today : 10:30 - 10:00</p>
+            <i class="fas fa-chevron-down" id="dropdown_btn"></i>
+          </div>
+        </li>
+          <div class="hidden_dropdown dropdown">
+        <li>
+          <p class="day">Monday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Tuesday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Wednesday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Thursday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Friday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Saturday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+        <li>
+          <p class="day">Sunday :</p>
+          <p class="time">10:30 - 10:00</p>
+        </li>
+      </div>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Map End -->
+
+<!-- Footer -->
+
+    <footer>
+        <div class="grid-box1 center-box ">
+      
+      
+          <!-- starts -->
+          <div class="icon-box">
+            <div class='icon'>
+              <img src="https://images.forestessentialsindia.com/pub/media/leaf-icon.png">
+            </div>
+            <div>100% Ayurvedic</div>
+      
+            <div class="icon-content">
+              Our products are certified 100% natural and inspired by Ayurveda recipes by the ministry of AYUSH. We conform to
+              the highest quality control standards
+            </div>
+          </div>
+      
+          <!-- ends -->
+      
+          <!-- starts -->
+          <div class="icon-box">
+            <div class='icon'>
+              <img src="https://images.forestessentialsindia.com/pub/media/paw-icon.png">
+            </div>
+            <div>Cruelty free</div>
+      
+            <div class="icon-content">
+              Our products are non-toxic, not tested on animals, and unadulterated without the use of parabens, sulphates,
+              chemical sunscreens, and synthetic fragrances.
+            </div>
+          </div>
+      
+          <!-- ends -->
+      
+          <!-- starts -->
+          <div class="icon-box">
+            <div class='icon'>
+              <img src="https://images.forestessentialsindia.com/pub/media/box-icon.png">
+            </div>
+            <div>Free shipping</div>
+      
+            <div class="icon-content">
+              On all International orders of INR 9999/- and above, and on all Domestic orders* T&C Apply.
+            </div>
+          </div>
+          <!-- ends -->
+      
+          <!-- starts -->
+          <div class="icon-box">
+            <div class='icon'>
+              <img src="https://images.forestessentialsindia.com/pub/media/hand-icon.png">
+            </div>
+            <div>Made in India</div>
+      
+            <div class="icon-content">
+              We celebrate the rich knowledge and heritage of India through our products, sourcing rare ingredients from
+              different parts of the country..
+            </div>
+          </div>
+          <!-- ends -->
+      
+      
+      
+        </div>
+      
+      
+        <div class="grid-box2">
+      
+          <!-- starts box -->
+      
+          <div class="footer-box">
+      
+      
+      
+            <div class="heading">SHOP</div>
+            <div>MAKEUP</div>
+            <div>FACIAL CARE</div>
+            <div>BODY CARE</div>
+            <div>HAIR CARE</div>
+            <div>MEN'S CARE</div>
+            <div>MOTHER & BABY CARE</div>
+            <div>WELLNESS</div>
+            <div>GIFTING</div>
+      
+      
+          </div>
+      
+          <!-- ends -->
+      
+          <!-- starts box -->
+      
+          <div class="footer-box">
+      
+            <div class="heading">ABOUT</div>
+            <div>OUR PHILOSOPHY</div>
+            <div>SOCIAL RESPONSIBILITY</div>
+            <div>MEDIA & PRESS</div>
+            <div>POLICIES</div>
+            <div>TERMS</div>
+            <div>FAQS</div>
+            <div>SOUNDARYA CLUB FAQS</div>
+            <div>CAREERS</div>
+      
+          </div>
+      
+          <!-- ends -->
+      
+          <!-- starts box -->
+      
+          <div class="footer-box">
+      
+      
+      
+            <div class="heading">QUICK LINKS</div>
+            <div>MY ACCOUNT</div>
+            <div>SOUNDARYA CLUB SIGN IN</div>
+            <div>AYURVEDIC DOCTOR INTERACTION</div>
+            <div>CUSTOMIZE A CREAM</div>
+            <div>STORES</div>
+            <div>BLOG</div>
+      
+            <div>OUR INGREDIENTS</div>
+      
+      
+          </div>
+      
+      
+      
+          <!-- ends -->
+      
+          <!-- starts box -->
+      
+          <div class="footer-box" id="contact_div">
+      
+      
+      
+            <div class="heading">CONTACT</div>
+            <div>Email:<br>
+              service@forestessentialsindia.com</div>
+            <div>Phone:<br>
+              +91-8010200666
+            </div>
+            <div>Contact Us</div>
+            <hr>
+      
+            <div>FOLLOW</div>
+      
+      
+          </div>
+      
+      
+      
+          <!-- ends -->
+      
+      
+        </div>
+      
+        <div class="grid-box3">
+      
+          <div id="payment_bottom">PAYMENT METHODS
+      
+            <img src="https://images.forestessentialsindia.com/pub/media/payment-method-new.png">
+      
+          </div>
+      
+          <div>©Forest Essentials</div>
+      
+        </div>
+      
+    </footer>
+
+      <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAQDE8z0Ldnx7Pa3hi6H8JU2ufs-EZ9oY&callback=initMap&v=weekly"
+        async
+      ></script>
+
+<script>
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+    styles: [
+      {
+          "featureType": "all",
+          "elementType": "labels.text.fill",
+          "stylers": [
+              {
+                  "saturation": 36
+              },
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 40
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+              {
+                  "visibility": "on"
+              },
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 16
+              }
+          ]
+      },
+      {
+          "featureType": "all",
+          "elementType": "labels.icon",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 20
+              }
+          ]
+      },
+      {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 17
+              },
+              {
+                  "weight": 1.2
+              }
+          ]
+      },
+      {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 20
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 21
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 17
+              }
+          ]
+      },
+      {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 29
+              },
+              {
+                  "weight": 0.2
+              }
+          ]
+      },
+      {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 18
+              }
+          ]
+      },
+      {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 16
+              }
+          ]
+      },
+      {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 19
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+              {
+                  "color": "#000000"
+              },
+              {
+                  "lightness": 17
+              }
+          ]
+      }
+  ]
+  });
+}
+
+    let menu = document.getElementsByClassName("item2_container");
+    function display_menus() {
+
+
+        menu.style.display = "block";
+    }
+</script>
