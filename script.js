@@ -555,7 +555,7 @@ function show_testimonial() {
     }
 
     count_t = count_t + 4;
-  }, 1000);
+  }, 2000);
 
 
 }
