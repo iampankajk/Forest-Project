@@ -169,6 +169,7 @@ a {
 .nav_sections ul{
  display: flex;
  list-style: none;
+ flex-wrap: wrap;
 
 }
 .nav_sections ul li{
@@ -301,7 +302,7 @@ a {
 
 .best_seller_product{
     padding-bottom: 60px;
-    width: 1250px;
+    max-width: 1250px;
     margin: auto;
 }
 .span{
@@ -340,7 +341,7 @@ a {
     flex-basis: 300px;
     font-size: 15px;
     font-weight: 300;
-    margin: 0px 0px;
+    margin: 0px auto;
     background-color: #FBF9F9;
     
 }
@@ -358,6 +359,10 @@ a {
     margin-left: 5px;
     border: solid 1px black;
     cursor: pointer;
+}
+.container{
+  max-width: 1250px;
+  margin: auto;
 }  
 .container>h2{
     font-weight: 400;
@@ -495,7 +500,7 @@ a {
 #category{
   margin-top: 5rem;
   margin:auto;
-  width: 113%;
+  max-width: 113%;
  
 }
 .item img {
@@ -529,6 +534,9 @@ margin-bottom: 2rem;
   background:url("images/arrow-right--i7ih6S.svg") no-repeat 0 0;
   background-size: 30px 20px;
 }
+h2{
+  max-width: 1250px;
+}
 .category_span{
   display: block;
   font-size: 15px ;
@@ -558,9 +566,15 @@ a{
 
 #gifts_info{
   display: flex;
-  gap: 10px;
+  flex-wrap: wrap;
 
 } 
+
+@media screen and (max-width:786px) {
+  #gifts_info{
+    gap: 10px;
+  }
+}
 #gifts_info>div{
   flex-basis: 250px;
   font-size: 15px;
@@ -775,7 +789,19 @@ body {
   grid-template-rows: 100%;
   grid-gap: 10px
 }
+@media screen and (max-width:786px) {
+  #testimonial_parent {
+    display: grid;
+    grid-template-columns: 24.2% 24.2%;
+    grid-template-rows: 100% 100%;
+    grid-gap: 10px
+    
+  }
+  #testimonial_parent>div:nth-child(3), #testimonial_parent>div:nth-child(4){
+    display: none;
+  }
 
+}
 #testimonial_parent>div:nth-child(1) {
   margin-left: 10px;
 }
