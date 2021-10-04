@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
+
+    <style>
+        .box {
+            width: 500px;
+            margin: 20px auto;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
+    <div class="box">
         <div id="total"></div>
         <form onsubmit="end(event)">
             <label for="card">Card Number</label>
@@ -21,21 +30,22 @@
         </form>
     </div>
 </body>
+
 </html>
 
 <script>
     let total = document.getElementById("total");
 
-    let t= document.createElement("p");
+    let t = document.createElement("p");
 
-   let tx = JSON.parse(localStorage.getItem("totalamount"));
+    let tx = JSON.parse(localStorage.getItem("promo"));
 
-   t.textContent= "Total Amount  " + tx[1];
+    t.textContent = "Total Amount  " + tx[0];
 
-   total.append(t);
+    total.append(t);
 
-   function end(e){
-       e.preventDefault();
-       alert("paymentSuccefull");
-   }
+    function end(e) {
+        e.preventDefault();
+        alert("paymentSuccefull");
+    }
 </script>
