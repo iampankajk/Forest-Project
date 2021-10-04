@@ -47,6 +47,14 @@ body{
   z-index: 10000;
   display: none;
 }
+
+@media screen and (max-width:786px) {
+
+  #cart_container{
+    width: 200px;
+  }
+  
+}
 #cart_show {
   background-color: white;
   width: 350px;
