@@ -19,7 +19,7 @@ body{
   background-color: rgb(51, 51, 51);
   color: white;
   padding: 10px 0px;
-  position: static;
+  position: fixed;
 
   width: inherit;
   margin-top: -10px;
@@ -99,6 +99,10 @@ margin-left: 8%;
   font-weight: 400;
   font-family: "calibri";
   color: #333;
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 100;
 }
 
 a {
@@ -243,6 +247,7 @@ a {
     align-items: center;
     width: 100%;
     margin: auto;
+    margin-top: 200px;
     position: relative;
     cursor: pointer;
   }
@@ -573,6 +578,12 @@ a{
 @media screen and (max-width:786px) {
   #gifts_info{
     gap: 10px;
+  }
+  .page_content>div{
+    flex-basis: 200px;
+  }
+  .best_seller_product_786{
+    margin-top: 250px;
   }
 }
 #gifts_info>div{
