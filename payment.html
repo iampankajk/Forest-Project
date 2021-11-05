@@ -11,22 +11,81 @@
         .box {
             width: 500px;
             margin: 20px auto;
+            align-items: center;
+            border-left: 1px solid rgba(0, 0, 255, .2);
+            height:500px;
+            border-radius: 50px;
+           
+            padding:2%;
+            box-shadow: 10px 10px 10px  rgba(0, 0, 255, .2);
         }
+        .box img{
+            max-width:80%;
+            height:50px;
+            margin-top: 2%;
+            align-items: center;
+            margin-left: 10%;
+        }
+         #card{
+             display:inline-block;
+             align-items: center;
+             line-height: 100%;
+             row-gap: 2%;
+             
+         } .pay{
+             color:grey;
+             font-size: large;
+             font-weight: 600;
+             text-decoration: underline;
+         }
+         #paynow{
+             justify-content: center;
+             width:50%;
+             height:35px;
+             margin-left:25%;
+            margin-top :10%;
+           background-color: blue;
+           border-radius: 17px;
+         }
+       
     </style>
 </head>
 
 <body>
+   
     <div class="box">
+        <div>
+            <img src="https://images.forestessentialsindia.com/pub/media/payment-method-new.png">
+        </div>
+        <hr>
         <div id="total"></div>
-        <form onsubmit="end(event)">
-            <label for="card">Card Number</label>
-            <input type="text" id="card">
-            <label for="cvv">CVV</label>
-            <input type="tel" id="cvv"><br>
-            <label for="datex">Expiry Date</label>
-            <input type="date" id="datex">
+        <p class="pay">Credit/Debit Card</p>
+        <div id="card">
 
-            <input type="submit" value="Pay Now">
+        <form onsubmit="end(event)">
+            <label for="card">Card Number:</label>
+            <input type="text" id="card">
+            <label for="cvv">CVV:</label>
+            <input type="tel" id="cvv">
+            <p></p>
+            <label for="datex">Expiry Date: &nbsp&nbsp  </label>
+            <input type="date" id="datex">
+           
+           
+       
+          <p class="pay">Pay By UPI </p>
+            
+          <label for="card">UPI Id:</label>
+            <input type="text" id="">
+           
+          
+            <p class="pay">NET Banking </p>
+            <label for="card">ID:</label>
+            <input type="text" id="">
+            <label for="card">Password:</label>
+           <input type="text" id=""><br>
+          <p></p>
+           <input type="submit" value="Pay Now" id="paynow"></div>
         </form>
     </div>
 </body>
@@ -39,13 +98,16 @@
     let t = document.createElement("p");
 
     let tx = JSON.parse(localStorage.getItem("promo"));
-
-    t.textContent = "Total Amount  " + tx[0];
+ 
+    //t.textContent = "Total Amount  " + tx[0];
 
     total.append(t);
-
+  
+  
     function end(e) {
+       
         e.preventDefault();
-        alert("paymentSuccefull");
+       
+        window.location.href ="success.html";
     }
 </script>
