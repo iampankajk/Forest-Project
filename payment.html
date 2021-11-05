@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <style>
+        .box {
+            width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div id="total"></div>
+        <form onsubmit="end(event)">
+            <label for="card">Card Number</label>
+            <input type="text" id="card">
+            <label for="cvv">CVV</label>
+            <input type="tel" id="cvv"><br>
+            <label for="datex">Expiry Date</label>
+            <input type="date" id="datex">
+
+            <input type="submit" value="Pay Now">
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let total = document.getElementById("total");
+
+    let t = document.createElement("p");
+
+    let tx = JSON.parse(localStorage.getItem("promo"));
+
+    t.textContent = "Total Amount  " + tx[0];
+
+    total.append(t);
+
+    function end(e) {
+        e.preventDefault();
+        alert("paymentSuccefull");
+    }
+</script>
