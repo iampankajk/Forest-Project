@@ -1,8 +1,10 @@
+
+// setting default user
 if (localStorage.getItem("f_users") === null) {
     localStorage.setItem("f_users", JSON.stringify([{ "email": "user@gmail.com", "password": "default" }]));
   }
 
-
+// Login function
   function signin(e) {
     e.preventDefault();
 
@@ -24,6 +26,8 @@ if (localStorage.getItem("f_users") === null) {
     }
   }
 
+
+  // top nav bar text
   var top_nav_text = [
     "Customize your cream now! Get started.",
     "Speak with certified ayurvedic doctors.Book Now!",
@@ -47,8 +51,11 @@ if (localStorage.getItem("f_users") === null) {
 
   }
 
-  top_nav();
+  top_nav(); //top nav bar function call to change text in very 5 seconds
 
+
+
+  // total quantity of of items in cart function
   function total_quantity() {
     let cart_total = document.getElementById("cart_total");
     let items = JSON.parse(localStorage.getItem("f_cart"));
@@ -78,12 +85,15 @@ if (localStorage.getItem("f_users") === null) {
 
   }
 
+  // closing the cart function
   function close_cart() {
     document.getElementById("cart_container").style.display = "none";
   }
 
   let cart_items = JSON.parse(localStorage.getItem("f_cart"));
   let cart_show = document.getElementById("cart_show");
+
+  // cart creation function
   function create() {
     let total_div = document.createElement("div");
     cart_show.append(total_div);
@@ -130,6 +140,6 @@ if (localStorage.getItem("f_users") === null) {
 
   }
 
-  create();
+  create(); // calling the cart creation
 
 

@@ -1,3 +1,5 @@
+
+  // top nav bar text
 var top_nav_text = [
     "Customize your cream now! Get started.",
     "Speak with certified ayurvedic doctors.Book Now!",
@@ -23,8 +25,10 @@ var top_nav_text = [
 
   }
 
-  top_nav();
+  top_nav();  //top nav bar function call to change text in very 5 seconds
 
+
+// total quantity of of items in cart function
   function total_quantity() {
     let cart_total = document.getElementById("cart_total");
     let items = JSON.parse(localStorage.getItem("f_cart"));
@@ -39,6 +43,7 @@ var top_nav_text = [
   total_quantity();
 
 
+  // show products on bag function
   let show_count = 0;
   function show_cart() {
     if (show_count == 0) {
@@ -51,13 +56,15 @@ var top_nav_text = [
     }
 
   }
-
+  // closing the cart function
   function close_cart() {
     document.getElementById("cart_container").style.display = "none";
   }
 
   let cart_items_s = JSON.parse(localStorage.getItem("f_cart"));
   let cart_show = document.getElementById("cart_show");
+
+    // cart creation function
   function create() {
     let total_div = document.createElement("div");
     cart_show.append(total_div);
@@ -113,10 +120,10 @@ var top_nav_text = [
 
   }
 
-  create();
+  create();  // calling the cart creation
 
 
-
+// free gift item
   let freegift = {
     name: "FREE - INTENSE REPAIR HAIR CARE RITUAL WORTH ₹875",
     image: "https://images.forestessentialsindia.com/pub/media/catalog/product/cache/3a98496dd7cb0c8b28c4c254a98f915a/p/o/pouch_image__1.png",
@@ -178,7 +185,7 @@ var top_nav_text = [
 
 
 
-
+// increasing quantity of same product
   function plusitem(prod) {
     item = JSON.parse(localStorage.getItem('f_cart'))
 
@@ -196,7 +203,7 @@ var top_nav_text = [
   }
 
 
-
+// decreasing quantity of same product
   function minusitem(prod) {
 
     item = JSON.parse(localStorage.getItem('f_cart'))
@@ -226,7 +233,7 @@ var top_nav_text = [
 
 
 
-
+// show the cart items on cart page function  
   function cartshow(p) {
 
     p.forEach(prod => {
