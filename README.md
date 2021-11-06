@@ -43,9 +43,9 @@
 <li>Home Page: Smooth and Responsive page with sliders and Different sections with grid and flex layout <img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(143).png' height='400px' ,width='300px'></li>
 <li>	Currency convertor</li>
 <li>	Account page with Sign-up,Log-in functionality</li>
-<li>Dynamic Product Page with grid layout<img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(144).png'  ,width='300px' ></li>
-<li>Dynamic Product description page</li>
-<li>Cart page with functionality to add , remove products<img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(147).png' width='300px',height='200px'></li>
+<li>Dynamic Product Page with grid layout<img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(144).png'  ,width='600px' height='200px' ></li>
+<li>Dynamic Product description page<img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(148).png' width='600px' height='200px'></li>
+<li>Cart page with functionality to add , remove products<img src='https://github.com/iampankajk/Forest-Project/blob/main/images/Screenshot%20(147).png' width='600px' height='200px'></li>
 <li>Coupon Code applicator</li>
 <li>Check out page</li>
 <li>Payment page that simply accept payment credentials in a form and shows an alert on submission</li>
