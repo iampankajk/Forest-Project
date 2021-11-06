@@ -61,7 +61,6 @@ setInterval(() => {
 
 dots.forEach((dot, i) => {
   dot.addEventListener("click", () => {
-    console.log(currentSlide);
     init(i);
     currentSlide = i;
   });
@@ -116,7 +115,7 @@ function show_best_seller(best_seller_product) {
     }
 
     price_num = Number(price_num);
-    console.log(price_num);
+    
     let price = document.createElement("p");
 
     price.textContent = product.currency + " " + price_num;
@@ -177,7 +176,7 @@ function show_gifts(gifts_section) {
       }
     }
     price_num = Number(price_num);
-    console.log(price_num);
+
     let price = document.createElement("p");
     price.textContent = gifts.currency + " " + price_num;
 
@@ -212,13 +211,12 @@ function change_currency() {
   best_product_info.innerHTML = "";
   gifts_info.innerHTML = "";
   best_seller_product.forEach(function (p) {
-    console.log(p.currency);
     p.currency = document.getElementById("currency").value;
   });
   show_best_seller(best_seller_product);
 
   gifts_section.forEach(function (p) {
-    console.log(p.currency);
+
     p.currency = document.getElementById("currency").value;
   });
 
@@ -313,7 +311,7 @@ function create() {
 
     let price_quantity = document.createElement("p");
 
-    console.log(item.price);
+  
 
     let price_num = "";
 

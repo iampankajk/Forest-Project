@@ -182,7 +182,7 @@ var top_nav_text = [
     best_product_info.innerHTML = "";
     let filter_options = document.getElementsByClassName("input_value");
     let f_cart = JSON.parse(localStorage.getItem("f_cart"));
-    console.log(filter_options[0].value);
+  
     let data = [];
     f_cart.forEach(function (a) {
       if (a.category == filter_options[0].value || a.category == filter_options[1].value || a.category == filter_options[2].value || a.category == filter_options[3].value || a.category == filter_options[4].value || a.category == filter_options[5].value) {
@@ -190,7 +190,7 @@ var top_nav_text = [
       }
     });
 
-    console.log(data);
+ 
     document.getElementById("filter_options").style.display = "none";
     show_best_seller(data);
 
@@ -240,7 +240,7 @@ var top_nav_text = [
 
       let price_quantity = document.createElement("p");
 
-      console.log(item.price);
+ 
 
       let price_num = "";
 

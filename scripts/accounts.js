@@ -106,7 +106,6 @@ if (localStorage.getItem("f_users") === null) {
 
       let price_quantity = document.createElement("p");
 
-      console.log(item.price);
 
       let price_num = "";
 

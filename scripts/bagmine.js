@@ -80,7 +80,6 @@ var top_nav_text = [
 
       let price_quantity = document.createElement("p");
 
-      console.log(item.price);
 
       let price_num = "";
 
